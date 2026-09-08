@@ -77,6 +77,6 @@
   "limits": {
     "time_ms": 2000,
     "memory_mb": 256,
-    "output_kb": 256
+    "output_kb": 512
   }
 }
