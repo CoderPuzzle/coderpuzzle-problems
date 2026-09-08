@@ -6,11 +6,6 @@ name: Check problems
 # every push/PR over the merged served tree, plus the bettercode-derived
 # judge sweep on demand and weekly (extend-derived bundles are judged
 # out-of-band via coderpuzzle's scripts/verify_solution.py).
-#
-# The image is pulled with a plain step instead of a `container:` job:
-# this repo's GITHUB_TOKEN has no grant on the image package (it lives
-# under the coderpuzzle repo), and ghcr denies such authenticated pulls
-# even though the package is public — an explicit anonymous pull works.
 
 on:
   push:
@@ -22,6 +17,9 @@ on:
 
 permissions:
   contents: read
+  # the container jobs' ghcr auto-login needs this: without it the
+  # GITHUB_TOKEN has no package access and pulls are DENIED
+  packages: read
 
 concurrency:
   # a scheduled sweep overlapping a manual dispatch would double 41 heavy
@@ -29,28 +27,25 @@ concurrency:
   group: judge-${{ github.event_name == 'schedule' && 'schedule' || github.ref }}
   cancel-in-progress: false
 
-env:
-  IMAGE: ghcr.io/coderpuzzle/coderpuzzle:latest
-
 jobs:
   static:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/coderpuzzle/coderpuzzle:latest
+      options: --user 0:0
     steps:
       - uses: actions/checkout@v5
-      - name: Pull the pinned runner image (anonymous; the package is public)
-        run: docker pull "$IMAGE"
       - name: Format check
-        run: |
-          docker run --rm --user 0:0 -v "$PWD":/repo -w /repo \
-            "$IMAGE" openoj format --check problems-adapt
+        run: openoj format --check problems-adapt
       - name: Bundle static checks
-        run: |
-          docker run --rm --user 0:0 -v "$PWD":/repo -w /repo \
-            "$IMAGE" python3 scripts/check.py --tree problems-adapt --skip-runtime
+        run: python3 scripts/check.py --tree problems-adapt --skip-runtime
 
   judge:
     if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/coderpuzzle/coderpuzzle:latest
+      options: --user 0:0
     strategy:
       fail-fast: false
       matrix:
@@ -100,11 +95,10 @@ jobs:
           ]
     steps:
       - uses: actions/checkout@v5
-      - name: Pull the pinned runner image (anonymous; the package is public)
-        run: docker pull "$IMAGE"
-      - name: List bettercode-derived bundles in ${{ matrix.shard }}
+      - name: Judge bettercode-derived bundles in ${{ matrix.shard }}
         run: |
-          python3 - << 'PYEOF' > bundles.txt
+          set -e
+          bundles=$(python3 - << 'PYEOF'
           import json
           mapping = json.load(open("problems-adapt/MAPPING.json"))
           shard = "${{ matrix.shard }}"
@@ -114,17 +108,12 @@ jobs:
               if (source_id - 1) // 100 * 100 + 1 == low:
                   print(f"problems-adapt/{shard}/{row['adapted']}")
           PYEOF
-          count=$(grep -c . bundles.txt || true)
+          )
+          count=$(printf '%s\n' "$bundles" | grep -c . || true)
           echo "judging $count bundles in ${{ matrix.shard }}"
-      - name: Judge bettercode-derived bundles in ${{ matrix.shard }}
-        run: |
-          docker run --rm --user 0:0 -v "$PWD":/repo -w /repo \
-            "$IMAGE" bash -c '
-              set -e
-              failures=0
-              for bundle in $(cat bundles.txt); do
-                if ! openoj judge "$bundle"; then failures=$((failures + 1)); fi
-              done
-              echo "bundles with failures: $failures"
-              exit $((failures > 0))
-            '
+          failures=0
+          for bundle in $bundles; do
+            if ! openoj judge "$bundle"; then failures=$((failures + 1)); fi
+          done
+          echo "bundles with failures in ${{ matrix.shard }}: $failures"
+          exit $((failures > 0))
