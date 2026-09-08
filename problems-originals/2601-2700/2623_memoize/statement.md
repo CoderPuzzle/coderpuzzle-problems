@@ -19,7 +19,7 @@ factorial.
 - factorial accepts a single integer n and returns 1 if n <= 1 or
   factorial(n - 1) * n otherwise.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `function memoize(fn)` with the behavior above; the generated `class
 Solution` keeps its `run(memoizeCase)` method, whose body hands your

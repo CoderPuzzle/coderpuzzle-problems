@@ -21,7 +21,7 @@ executed at 95ms, and the 3rd would be executed at 135ms.
 
 ![diagram](figures/2627-1.svg)
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. It is also judged on a
 deterministic virtual clock instead of real timers: your submission
 declares `function debounce(fn, t)` plus a class Solution whose `run`

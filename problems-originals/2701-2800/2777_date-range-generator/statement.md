@@ -11,7 +11,7 @@ values.
 
 All yielded dates must be in the string format YYYY-MM-DD.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission defines a generator function
 `dateRangeGenerator(start, end, step)` that yields one date string per
 step, and declares a class `Solution` whose `run(genCase)` hands that

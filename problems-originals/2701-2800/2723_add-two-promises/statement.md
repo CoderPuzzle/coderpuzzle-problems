@@ -6,7 +6,7 @@ Given two promises promise1 and promise2, return a new promise. promise1
 and promise2 will both resolve with a number. The returned promise should
 resolve with the sum of the two numbers.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and its timing runs on a deterministic virtual clock instead of real
 timers. Your submission defines `addTwoPromises(promise1, promise2)` — a
 function taking the two input promises and returning a new promise that

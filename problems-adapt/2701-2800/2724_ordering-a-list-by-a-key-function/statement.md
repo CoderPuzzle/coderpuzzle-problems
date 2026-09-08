@@ -11,7 +11,7 @@ the largest key comes last.
 You may rely on fn never producing the same number twice for one array,
 so no two elements ever tie.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your entry point is a class `Solution` with `run(orderCase)`; inside
 it, call `orderCase.check(this)`. The bundle-provided case carrier then
 hands your `orderBy(arr, fn)` method this case's array together with the

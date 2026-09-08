@@ -22,7 +22,7 @@ in the source array.
 
 ![diagram](figures/2624-1.svg)
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission still enhances `Array` as described — add
 `zigzagColumns(rowsCount, colsCount)` to `Array.prototype` (TypeScript
 merges the method into the global `Array` interface) implementing exactly

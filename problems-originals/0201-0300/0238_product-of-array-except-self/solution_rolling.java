@@ -45,7 +45,7 @@ class Solution {
         PrintStream raw = null;
         try {
             raw = new PrintStream(new FileOutputStream(FileDescriptor.out), false);
-            raw.print("__OPENOJ_RESULT__{\"status\":\"completed\",\"actual\":" + json + "}\n");
+            raw.print("__CODERPUZZLE_RESULT__{\"status\":\"completed\",\"actual\":" + json + "}\n");
             raw.flush();
         } catch (Exception ignored) {
             // Fall through; the harness will report a serialization error.

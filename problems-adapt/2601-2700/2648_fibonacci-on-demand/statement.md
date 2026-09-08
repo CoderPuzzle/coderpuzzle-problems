@@ -6,7 +6,7 @@ Build a generator function that hands out the Fibonacci sequence one
 number at a time, forever. The sequence follows the recurrence
 `Xn = Xn-1 + Xn-2` and opens with 0, 1, 1, 2, 3, 5, 8, 13.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission defines a generator function `fibonacciStream()`
 that yields the sequence, and declares a class `Solution` whose
 `run(stepCase)` hands that function to the bundle-provided case carrier:

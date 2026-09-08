@@ -34,7 +34,7 @@ Its promise-based equivalent would instead `return total` or
 `throw Error("negative input")` — your wrapper is what stands between
 the two styles.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission defines the conversion function
 `callbackToPromise` and declares a class `Solution` whose
 `run(callbackDriver)` hands it to the bundle-provided driver:

@@ -22,7 +22,7 @@ start**. `cleanRoom` returns nothing; the judge compares the exact set of
 cells the robot cleaned against the set of reachable cells, so any complete
 strategy passes and any missed cell fails.
 
-**Note (OpenOJ):** this problem is offered in Python 3 and Java only. The
+**Note (CoderPuzzle):** this problem is offered in Python 3 and Java only. The
 robot starts facing up, and the oracle's operation budget is 200 000 calls
 (`move`, `turnLeft`, `turnRight`, `clean` each spend one) — generous for a
 systematic exploration, but a solution that wanders without direction will

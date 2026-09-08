@@ -18,7 +18,7 @@ two run together, and as soon as either finishes the next one starts.
 
 You may assume none of the functions ever rejects.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and its timing runs on a deterministic virtual clock instead of real
 timers. Your submission defines `promisePool(functions, n)` and declares a
 class `Solution` whose `run(driver)` hands that function over with

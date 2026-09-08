@@ -25,7 +25,7 @@ Your EventEmitter class should have the following two methods:
   return an empty array. Otherwise, return an array of the results of all
   callback calls in the order they were subscribed.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript only —
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript only —
 LeetCode offers no other languages for it. Your submission declares
 `class EventEmitter` with the two methods above; the generated
 `class Solution` keeps its `run(emitterCase)` method, whose body hands your

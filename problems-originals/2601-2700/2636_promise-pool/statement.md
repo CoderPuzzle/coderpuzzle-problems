@@ -21,7 +21,7 @@ available), and so on until there are no functions left to execute.
 You can assume all functions never reject. It is acceptable for
 promisePool to return a promise that resolves any value.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and its timing runs on a deterministic virtual clock instead of real
 timers. Your submission defines `promisePool(functions, n)` and declares a
 class `Solution` whose `run(driver)` hands that function over with
@@ -34,7 +34,7 @@ start and end tick is fully determined. The driver records both ticks for
 every function and compares them exactly: `[starts[], ends[]]`. Settling
 promise values are ignored (`null` settles everywhere); only the schedule
 is judged. In the examples below, the crawled Output column shows how
-LeetCode's wall-clock harness displayed completion times; OpenOJ judges
+LeetCode's wall-clock harness displayed completion times; CoderPuzzle judges
 the start/end schedule instead — same machines, same numbers on any run.
 
 ### Example 1

@@ -20,7 +20,7 @@ help you:
 
 Return the number of unique categories.
 
-**Note (OpenOJ):** the signature is `numberOfCategories(categoryHandler,
+**Note (CoderPuzzle):** the signature is `numberOfCategories(categoryHandler,
 n)`; the handler arrives as the first argument handed to your method,
 and every `haveSameCategory` call counts against an ample budget of
 10 000 queries.

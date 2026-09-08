@@ -16,7 +16,7 @@ array are considered to be 0.
 
 Please solve it without the built-in Array.flat method.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `function flat(arr, depth)` with the behavior above; the generated `class
 Solution` keeps its `run(flattenCase)` method, whose body hands your

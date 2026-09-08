@@ -13,7 +13,7 @@ appear in the array. The order of the keys themselves is up to you.
 
 Do not reach for lodash's `_.groupBy` — building the grouping is the point.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `groupBy(bucketCase)`, where `bucketCase` is a bundle-provided `BucketCase`
 carrying `.fn`, the callable built from the case's function source, and

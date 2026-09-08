@@ -16,7 +16,7 @@ true. Surviving elements keep their original order.
 
 The built-in `Array.filter` method is off limits.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `solve(pickCase)`, where `pickCase` is a bundle-provided `PickCase`
 carrying `.arr`, the integer array under test, and `.fn`, the callable

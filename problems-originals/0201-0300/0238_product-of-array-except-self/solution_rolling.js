@@ -7,19 +7,19 @@
  * JSON.stringify, which cannot represent BigInt natively; teach it to emit
  * bare integer tokens for BigInt members.
  */
-const __openojNativeStringify = JSON.stringify;
+const __coderpuzzleNativeStringify = JSON.stringify;
 JSON.stringify = function (value, replacer, space) {
-    const text = __openojNativeStringify(
+    const text = __coderpuzzleNativeStringify(
         value,
         function (key, item) {
             if (typeof item === "bigint") {
-                return "__openoj_bigint__" + item.toString();
+                return "__coderpuzzle_bigint__" + item.toString();
             }
             return replacer ? replacer.call(this, key, item) : item;
         },
         space,
     );
-    return typeof text === "string" ? text.replace(/"__openoj_bigint__(-?\d+)"/g, "$1") : text;
+    return typeof text === "string" ? text.replace(/"__coderpuzzle_bigint__(-?\d+)"/g, "$1") : text;
 };
 
 var productExceptSelf = function (nums) {

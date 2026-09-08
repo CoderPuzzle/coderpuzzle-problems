@@ -21,7 +21,7 @@ one after another. The class should provide:
 
 Answers within 10⁻⁵ of the true result are considered correct.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission defines the `ChainCalc` class and a
 `Solution.solve(replayCase)` adapter. The adapter should call
 `replayCase.drive(ChainCalc)` so the bundle-provided case driver

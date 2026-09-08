@@ -11,7 +11,7 @@ arguments are. Two arguments count as the same one only when they are `===`
 to each other — structurally identical objects that happen to be distinct
 references are different arguments.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `runMemoized(replayCacheCase)`, where `replayCacheCase` is a
 bundle-provided `ReplayCacheCase` carrying `.source`, the source text of

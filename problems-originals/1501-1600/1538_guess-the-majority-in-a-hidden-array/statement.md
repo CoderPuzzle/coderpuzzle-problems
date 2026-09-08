@@ -20,7 +20,7 @@ You may call `query` at most `2 * n` times, where `n` is `length()`.
 Return any index whose value is the most frequent one in `nums`; if
 `0`s and `1`s tie, return `-1`.
 
-**Note (OpenOJ):** the signature is `guessMajority(reader)`; the API
+**Note (CoderPuzzle):** the signature is `guessMajority(reader)`; the API
 arrives as the `ArrayReader` object handed to your method — call
 `reader.query(a, b, c, d)` and `reader.length()` to query it.
 

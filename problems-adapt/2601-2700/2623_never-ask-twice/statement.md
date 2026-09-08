@@ -17,7 +17,7 @@ Three underlying functions can appear:
 - `factorial` takes one integer `n` and returns 1 when `n <= 1`,
   otherwise `factorial(n - 1) * n`.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `function cacheResults(fn)` with the
 behavior above; the generated `class Solution` keeps its
 `run(memoProbe)` method, whose body hands your function to the

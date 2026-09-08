@@ -25,7 +25,7 @@ Your Calculator class should have the following methods:
 
 Solutions within 10⁻⁵ of the actual result are considered correct.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript only
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript only
 — LeetCode offers no other languages for it. Your submission defines the
 `Calculator` class and a `Solution.solve(calculatorCase)` adapter. The
 adapter should call `calculatorCase.drive(Calculator)` so the bundle-provided

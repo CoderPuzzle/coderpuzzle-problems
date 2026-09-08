@@ -19,7 +19,7 @@ it also lands before 80ms. When 80ms arrives, `fn` runs once with the
 
 ![diagram](figures/2676-1.svg)
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. It is also judged on a deterministic virtual clock rather than
 real timers: your submission declares `function paceCalls(fn, t)` plus a
 `class Solution` whose `run` method hands your function to the

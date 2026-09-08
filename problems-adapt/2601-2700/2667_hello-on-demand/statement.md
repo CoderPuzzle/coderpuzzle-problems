@@ -6,7 +6,7 @@ Build a factory `makeGreeter` that hands back one new function, and that
 returned function answers `"Hello World"` every single time it is
 invoked — no matter how many arguments arrive or what they carry.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `function makeGreeter()` at top level with
 the behavior above; the generated `class Solution` keeps its
 `run(greetingRehearsal)` method, whose body hands your factory to the

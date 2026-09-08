@@ -11,7 +11,7 @@ matcher methods.
 - `notSameAs(other)` returns `true` when `val` and `other` are `!==` to
   each other. When they are equal, it throws an error `"Equal"`.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — there are no other languages for it. Your submission declares the
 function `checkThat(val)` plus a class `Solution` whose `run(assertionCase)`
 hands that function to the bundle-provided case carrier:

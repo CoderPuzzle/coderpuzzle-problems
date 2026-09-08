@@ -1,6 +1,6 @@
 # Variant wave II — fleet log
 
-Recreated 2026-09-05 per the fleet-discipline rules in openoj/CLAUDE.md.
+Recreated 2026-09-05 per the fleet-discipline rules in coderpuzzle/CLAUDE.md.
 
 ## Rate-limit events
 

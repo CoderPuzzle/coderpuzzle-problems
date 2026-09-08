@@ -38,7 +38,7 @@ Implement `harvestSite(startUrl, linkIndex)` so the harvest is performed
 concurrently by multiple threads, and return every harvested URL in any
 order.
 
-**Note (OpenOJ):** the judge builds the page graph described by `urls` and
+**Note (CoderPuzzle):** the judge builds the page graph described by `urls` and
 `edges` (an edge `[i, j]` means page `urls[i]` lists `urls[j]`), hands your
 method a thread-safe `LinkIndex` over it, and compares the set of URLs you
 return against the expected set, order-insensitively.

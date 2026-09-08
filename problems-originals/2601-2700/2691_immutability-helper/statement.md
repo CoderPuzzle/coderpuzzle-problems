@@ -40,7 +40,7 @@ analyze differences between what was returned and the original obj. Doing a
 full comparison would be too computationally expensive. Also, any mutations
 to the original object will result in a wrong answer.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `run(imCase)`, where `imCase` is a
 bundle-provided `ImCase` carrying `.obj`, the immutable object under test,

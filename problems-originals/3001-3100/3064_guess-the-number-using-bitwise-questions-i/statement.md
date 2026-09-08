@@ -13,7 +13,7 @@ binary representation. In other words, it returns the number of set bits in
 
 Return the number `n`.
 
-**Note (OpenOJ):** the signature is `findNumber(hiddenNumber)`; the API
+**Note (CoderPuzzle):** the signature is `findNumber(hiddenNumber)`; the API
 arrives as the `HiddenNumber` object handed to your method — call
 `hiddenNumber.commonSetBits(num)` to query it.
 

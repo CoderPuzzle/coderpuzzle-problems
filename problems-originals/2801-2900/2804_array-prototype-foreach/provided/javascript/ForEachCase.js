@@ -9,7 +9,7 @@
 //   and records its final contents — the judged transcript. Both calls
 //   refuse the native Array.prototype.forEach, captured below before any
 //   submission code has run.
-const openojNativeForEach = Array.prototype.forEach;
+const coderpuzzleNativeForEach = Array.prototype.forEach;
 
 class ForEachCase {
     constructor(values) {
@@ -79,7 +79,7 @@ class ForEachCase {
     // ends up. The snapshot, not the live array, is what verdict()
     // reports.
     run() {
-        if (this.arr.forEach === openojNativeForEach) {
+        if (this.arr.forEach === coderpuzzleNativeForEach) {
             throw new Error("define your own Array.prototype.forEach; the native method does not count");
         }
         this.arr.forEach(this.fn, this.context);

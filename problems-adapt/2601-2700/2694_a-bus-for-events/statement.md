@@ -20,7 +20,7 @@ on, cut down to two methods:
   subscriber runs — each receives that array as its arguments — and
   emit returns the callbacks' return values in subscription order.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class EventBus` with the two methods
 above; the generated `class Solution` keeps its `run(busCase)` method,
 whose body hands your class to the bundle-provided driver:

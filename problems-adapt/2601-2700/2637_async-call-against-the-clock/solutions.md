@@ -18,7 +18,7 @@ settles during the call itself, and the judge's driver drains queued
 reactions before any virtual tick fires — mirroring real event loops,
 where microtasks always precede timers. For sleeping fns the race is
 decided purely by whether the fn's internal delay sits below `t`
-(Examples 2–3 resolve, Example 1 rejects), and on OpenOJ's virtual clock
+(Examples 2–3 resolve, Example 1 rejects), and on CoderPuzzle's virtual clock
 both sides of the race arm against one deterministic schedule captured by
 the harness, so `"time"` never enters the judged answer.
 

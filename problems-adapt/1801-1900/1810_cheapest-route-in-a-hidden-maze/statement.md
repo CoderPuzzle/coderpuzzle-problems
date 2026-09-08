@@ -27,7 +27,7 @@ one column left, one column right.
 Return the smallest total toll for a walk from the start to the goal, or
 `-1` when nothing connects them.
 
-**Note (OpenOJ):** judging works by answering queries against the hidden
+**Note (CoderPuzzle):** judging works by answering queries against the hidden
 maze — the grid, the start, and the goal are never revealed to your code.
 The controller permits 1 000 000 queries, far beyond what a disciplined
 exploration spends, but a program that wanders without direction will be

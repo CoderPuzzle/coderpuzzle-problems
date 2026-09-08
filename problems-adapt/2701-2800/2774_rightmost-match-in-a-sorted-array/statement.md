@@ -7,7 +7,7 @@ reports where `target` last sits. The array is sorted in ascending order
 and may repeat values; when `target` does not appear at all, the call
 reports `-1`.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — there are no other languages for it. Your submission declares
 `class Solution` with the method `solve(sortedCase)`, where `sortedCase`
 is a bundle-provided `SortedCase` carrying `.nums`, the sorted array

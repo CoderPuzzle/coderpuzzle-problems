@@ -18,7 +18,7 @@ contain it.
 Every real element sits far below `2147483647`, so the sentinel is
 unambiguous: reading it always means "out of range", never a stored value.
 
-**Note (OpenOJ):** this problem accepts Python 3 and Java submissions only.
+**Note (CoderPuzzle):** this problem accepts Python 3 and Java submissions only.
 Your method receives `(reader, target)`; the reader permits 10 000 queries,
 far beyond what any logarithmic strategy spends.
 

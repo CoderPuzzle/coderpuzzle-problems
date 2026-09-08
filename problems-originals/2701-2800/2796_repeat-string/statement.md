@@ -7,7 +7,7 @@ string.replicate(x) method on any string and it will return repeated string
 x times. Try to implement it without using the built-in method
 string.repeat.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `solve(strCase)`, where `strCase` is a
 bundle-provided `StrCase` carrying `.str`, the string under test, and

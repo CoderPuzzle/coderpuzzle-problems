@@ -24,7 +24,7 @@ The input `obj` is valid JSON, an object or an array, exactly as
 nested object or array reached through the view is guarded the moment
 it is read, before anything can be written into it.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares the function `writeProof(obj)` plus a
 class `Solution` whose `run(writeProofCase)` hands that function to the
 bundle-provided case carrier: `writeProofCase.drive(writeProof)`. Each

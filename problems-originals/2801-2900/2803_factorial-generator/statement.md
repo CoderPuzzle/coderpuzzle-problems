@@ -10,7 +10,7 @@ n! = n * (n-1) * (n-2) * ... * 2 * 1.
 
 The factorial of 0 is defined as 1.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission defines a generator function `factorial(n)` that
 yields one factorial per step, and declares a class `Solution` whose
 `run(genCase)` hands that function to the bundle-provided case carrier:

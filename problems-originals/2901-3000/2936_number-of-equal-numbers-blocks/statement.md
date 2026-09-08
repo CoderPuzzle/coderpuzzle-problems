@@ -23,7 +23,7 @@ equal values. Return the number of these blocks.
 Note that if you want to test your solution using a custom test, behavior
 for tests with nums.length > 10 is undefined.
 
-**Note (OpenOJ):** your `countBlocks` method receives the `BigArray` as its
+**Note (CoderPuzzle):** your `countBlocks` method receives the `BigArray` as its
 only argument. A test case describes nums by its maximal blocks — each
 block as a `[value, count]` pair — and the judge builds the `BigArray` from
 that description, so arrays far too large to list directly are fair game.

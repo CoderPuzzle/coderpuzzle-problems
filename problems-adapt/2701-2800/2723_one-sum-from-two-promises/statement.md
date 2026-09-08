@@ -7,7 +7,7 @@ one new promise of your own that resolves with the sum of those two
 numbers, no matter which of the inputs settles first or how long either
 takes.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and its timing runs on a deterministic virtual clock instead of real
 timers. Your submission defines `sumPromises(promise1, promise2)` — a
 function taking the two input promises and returning a new promise that

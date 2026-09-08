@@ -19,7 +19,7 @@ You write a generator that behaves like this:
     - a negative jump moves the position backward by the size of the
       jump, with the first slot connecting forward to the last.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission defines a generator function
 `walkCircularArray(arr, startIndex)` and declares a class `Solution`
 whose `run(ringWalkCase)` hands that function to the bundle-provided

@@ -1,21 +1,21 @@
 // The judge's expected values are exact big integers, so the products are
 // computed with math/big-style arithmetic (implemented directly on digit
-// slices). openojRawInt serializes as a bare JSON number token via its
+// slices). coderpuzzleRawInt serializes as a bare JSON number token via its
 // MarshalJSON method; the harness marshals the return value with encoding/json.
-type openojRawInt string
+type coderpuzzleRawInt string
 
-func (v openojRawInt) MarshalJSON() ([]byte, error) { return []byte(v), nil }
+func (v coderpuzzleRawInt) MarshalJSON() ([]byte, error) { return []byte(v), nil }
 
-// openojBig is a signed big integer stored base 1e9, little-endian.
+// coderpuzzleBig is a signed big integer stored base 1e9, little-endian.
 // An empty digit slice represents zero.
-type openojBig struct {
+type coderpuzzleBig struct {
 	neg bool
 	d   []uint32
 }
 
-func openojBigMulSmall(a openojBig, v int64) openojBig {
+func coderpuzzleBigMulSmall(a coderpuzzleBig, v int64) coderpuzzleBig {
 	if v == 0 || len(a.d) == 0 {
-		return openojBig{}
+		return coderpuzzleBig{}
 	}
 	neg := a.neg != (v < 0)
 	x := uint64(v)
@@ -33,12 +33,12 @@ func openojBigMulSmall(a openojBig, v int64) openojBig {
 		d = append(d, uint32(carry%1000000000))
 		carry /= 1000000000
 	}
-	return openojBig{neg: neg, d: d}
+	return coderpuzzleBig{neg: neg, d: d}
 }
 
-func openojBigMulBig(a, b openojBig) openojBig {
+func coderpuzzleBigMulBig(a, b coderpuzzleBig) coderpuzzleBig {
 	if len(a.d) == 0 || len(b.d) == 0 {
-		return openojBig{}
+		return coderpuzzleBig{}
 	}
 	d := make([]uint32, len(a.d)+len(b.d)+1)
 	for i := 0; i < len(a.d); i++ {
@@ -57,10 +57,10 @@ func openojBigMulBig(a, b openojBig) openojBig {
 	for len(d) > 0 && d[len(d)-1] == 0 {
 		d = d[:len(d)-1]
 	}
-	return openojBig{neg: a.neg != b.neg, d: d}
+	return coderpuzzleBig{neg: a.neg != b.neg, d: d}
 }
 
-func (b openojBig) String() string {
+func (b coderpuzzleBig) String() string {
 	if len(b.d) == 0 {
 		return "0"
 	}
@@ -80,23 +80,23 @@ func productExceptSelf(nums []int) []any {
 	// before i) x (product of everything after i), both computable as
 	// running products — no division, which zeros would break anyway.
 	n := len(nums)
-	pre := make([]openojBig, n+1)
+	pre := make([]coderpuzzleBig, n+1)
 	// pre[i] = product of the i elements preceding index i.
-	pre[0] = openojBig{d: []uint32{1}}
+	pre[0] = coderpuzzleBig{d: []uint32{1}}
 	for i := 0; i < n; i++ {
-		pre[i+1] = openojBigMulSmall(pre[i], int64(nums[i]))
+		pre[i+1] = coderpuzzleBigMulSmall(pre[i], int64(nums[i]))
 	}
-	suf := make([]openojBig, n+1)
+	suf := make([]coderpuzzleBig, n+1)
 	// suf[i] = product of everything from index i onward.
-	suf[n] = openojBig{d: []uint32{1}}
+	suf[n] = coderpuzzleBig{d: []uint32{1}}
 	for i := n - 1; i >= 0; i-- {
-		suf[i] = openojBigMulSmall(suf[i+1], int64(nums[i]))
+		suf[i] = coderpuzzleBigMulSmall(suf[i+1], int64(nums[i]))
 	}
 	answer := make([]any, n)
 	// pre[i] x suf[i+1] spans everything except nums[i] itself; a lone
 	// zero zeroes every cell but its own, automatically.
 	for i := 0; i < n; i++ {
-		answer[i] = openojRawInt(openojBigMulBig(pre[i], suf[i+1]).String())
+		answer[i] = coderpuzzleRawInt(coderpuzzleBigMulBig(pre[i], suf[i+1]).String())
 	}
 	return answer
 }

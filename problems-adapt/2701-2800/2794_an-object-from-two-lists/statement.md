@@ -16,7 +16,7 @@ Two rules shape the result:
 
 Return the finished object.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your entry point is a class `Solution` with `run(caseRunner)`;
 inside it, call `caseRunner.check(this)`. The case runner then hands your
 `buildObject(keysArr, valuesArr)` method the two arrays as live JavaScript

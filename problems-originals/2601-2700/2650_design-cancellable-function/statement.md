@@ -37,7 +37,7 @@ An example of how your code would be used:
 If instead cancel() was not called or was called after t=100ms, the promise
 would have resolved 5.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it — and its timing runs on
 a deterministic virtual clock instead of real timers. The bundle-provided
 `CancellableCase` carries `.source`, the case's `generatorFunction` source

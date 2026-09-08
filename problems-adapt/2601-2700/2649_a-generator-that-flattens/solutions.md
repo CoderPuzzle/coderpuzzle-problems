@@ -3,7 +3,7 @@
 ## Explicit-Stack Depth-First Generator
 
 A generator function can simply recurse with `yield*`, and on LeetCode
-that is safe. OpenOJ's runner pins every submission to a shallow call
+that is safe. CoderPuzzle's runner pins every submission to a shallow call
 stack, so instead the traversal keeps an explicit stack of frames, where
 each frame is one array being iterated together with its read cursor.
 Walking the structure then needs no call frames at all: peek the innermost

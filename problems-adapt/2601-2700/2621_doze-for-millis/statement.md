@@ -8,7 +8,7 @@ with is up to you — the value is never looked at.
 
 Small timing drift around `millis` is tolerated.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `run(pauseProbe)`, where `pauseProbe` is a bundle-provided `PauseProbe`
 carrying `.millis`, the integer above. Define `async function doze(millis)`

@@ -17,7 +17,7 @@ single merged value. The folding proceeds recursively:
   simply obj2. This rule is what makes null and the scalar values
   (strings, numbers, booleans) the leaves where recursion stops.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — the original provides no other languages for it.
 
 ### Example 1

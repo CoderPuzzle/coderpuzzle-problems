@@ -19,7 +19,7 @@ contain a value for a given column, the cell should contain an empty string
 
 The columns in the matrix should be in lexographically ascending order.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `function toMatrix(arr)` with the behavior above; the generated `class
 Solution` keeps its `run(matrixCase)` method, whose body hands your function

@@ -34,17 +34,17 @@ Solutions are authored on top of the generated starters.
 
 ```json
 {
-  "schema_version": 2,
-  "reference_solution": "",
-  "id": 1,
-  "slug": "two-sum",
-  "title": "Two Sum",
-  "difficulty": "Easy",
-  "tags": ["Array", "Hash Table"],
-  "topics": ["Array", "Hash Table"],
-  "type": "Algorithms",
-  "invocation": { "...": "see below" },
-  "limits": { "time_ms": 1500, "memory_mb": 256, "output_kb": 64 }
+    "schema_version": 2,
+    "reference_solution": "",
+    "id": 1,
+    "slug": "two-sum",
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "tags": ["Array", "Hash Table"],
+    "topics": ["Array", "Hash Table"],
+    "type": "Algorithms",
+    "invocation": { "...": "see below" },
+    "limits": { "time_ms": 1500, "memory_mb": 256, "output_kb": 64 }
 }
 ```
 
@@ -73,31 +73,31 @@ LeetCode-style, with a neutral `value_type` tree shared by every language:
 
 ```json
 {
-  "type": "function",
-  "class_name": "Solution",
-  "method": "twoSum",
-  "parameters": [
-    {
-      "name": "nums",
-      "codec": "json",
-      "value_type": {
+    "type": "function",
+    "class_name": "Solution",
+    "method": "twoSum",
+    "parameters": [
+        {
+            "name": "nums",
+            "codec": "json",
+            "value_type": {
+                "kind": "array",
+                "items": { "kind": "integer", "bits": 32 }
+            }
+        },
+        {
+            "name": "target",
+            "codec": "json",
+            "value_type": { "kind": "integer", "bits": 32 }
+        }
+    ],
+    "return_codec": "json",
+    "return_type": {
         "kind": "array",
         "items": { "kind": "integer", "bits": 32 }
-      }
     },
-    {
-      "name": "target",
-      "codec": "json",
-      "value_type": { "kind": "integer", "bits": 32 }
-    }
-  ],
-  "return_codec": "json",
-  "return_type": {
-    "kind": "array",
-    "items": { "kind": "integer", "bits": 32 }
-  },
-  "entrypoints": { "go": "twoSum", "rust": "two_sum", "typescript": "twoSum" },
-  "comparison": "exact"
+    "entrypoints": { "go": "twoSum", "rust": "two_sum", "typescript": "twoSum" },
+    "comparison": "exact"
 }
 ```
 
@@ -129,10 +129,10 @@ LeetCode-style, with a neutral `value_type` tree shared by every language:
 
 ```json
 {
-  "type": "sql",
-  "parameters": [{ "name": "dataset", "codec": "sql_setup" }],
-  "return_codec": "rows",
-  "comparison": "set"
+    "type": "sql",
+    "parameters": [{ "name": "dataset", "codec": "sql_setup" }],
+    "return_codec": "rows",
+    "comparison": "set"
 }
 ```
 
@@ -170,7 +170,7 @@ interactive oracle — ships as source under the bundle's own
 predefined data structures of its own, so every bundle is
 self-contained. Copy a well-known type's shape from a sibling bundle
 using the same kind — never hand-invent one, never share a definition
-across bundles. These sources are problem-set content (see the openoj
+across bundles. These sources are problem-set content (see the coderpuzzle
 repo's `docs/TRUST-BOUNDARIES.md`), assembled into every submission by
 the judge, and they follow each language's assembly rules (Rust sources
 use fully-qualified paths and no `use` lines; positional construction
@@ -180,8 +180,8 @@ matches declared field/parameter order in every language).
 
 ```json
 {
-  "public": [{ "input": [[2, 7, 11, 15], 9], "expected": [0, 1] }],
-  "hidden": [{ "input": [[3, 2, 4], 6], "expected": [1, 2] }]
+    "public": [{ "input": [[2, 7, 11, 15], 9], "expected": [0, 1] }],
+    "hidden": [{ "input": [[3, 2, 4], 6], "expected": [1, 2] }]
 }
 ```
 
@@ -234,7 +234,7 @@ holds the implementation and every version pin, and this repo's
 `scripts/format.py` is only a loader that imports it — from inside the
 image in CI, or from a sibling coderpuzzle checkout locally (`OPENOJ_RUNNER_DIR`
 to point elsewhere). Generation (`gen_starters.py`), checking
-(`check.py`), CI, the editor's Format button, and the `openoj format` CLI
+(`check.py`), CI, the editor's Format button, and the `coderpuzzle format` CLI
 all format through that single module, so output is byte-identical
 everywhere. This repo deliberately tracks no formatter pins or
 `node_modules` of its own (a gitignored `node_modules/.bin` may exist
@@ -261,7 +261,7 @@ from the image:
 
 ```bash
 docker run --rm --user 0:0 -v "$PWD":/repo:rw \
-  ghcr.io/coderpuzzle/coderpuzzle:latest openoj format --check /repo/problems-adapt /repo/FORMAT.md
+  ghcr.io/coderpuzzle/coderpuzzle:latest coderpuzzle format --check /repo/problems-adapt /repo/FORMAT.md
 ```
 
 When you add or edit a solution, run the formatter before pushing — CI

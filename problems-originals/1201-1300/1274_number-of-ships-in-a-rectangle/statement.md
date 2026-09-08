@@ -22,7 +22,7 @@ hands to your method:
 Submissions making more than **400 calls to `hasShips`** are judged wrong,
 and any solution that attempts to circumvent the judge is disqualified.
 
-**Note (OpenOJ):** this problem is offered in Python 3 and Java only. The
+**Note (CoderPuzzle):** this problem is offered in Python 3 and Java only. The
 signature is `countShips(sea, topRight, bottomLeft)`, and corner points are
 plain two-element arrays `[x, y]` rather than a `Point` class. The query
 rectangle may degenerate to a single row, a single column, or a single point.

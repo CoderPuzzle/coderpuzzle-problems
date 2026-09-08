@@ -1,7 +1,7 @@
 name: Check problems
 
 # Runs inside the published runner image (the same build that powers the
-# editor's Format button and the openoj CLI), so the toolchain is the
+# editor's Format button and the coderpuzzle CLI), so the toolchain is the
 # pinned one by construction: format check + static bundle checks on
 # every push/PR over the merged served tree, plus the bettercode-derived
 # judge sweep on demand and weekly (extend-derived bundles are judged
@@ -36,7 +36,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Format check
-        run: openoj format --check problems-adapt
+        run: coderpuzzle format --check problems-adapt
       - name: Bundle static checks
         run: python3 scripts/check.py --tree problems-adapt --skip-runtime
 
@@ -113,7 +113,7 @@ jobs:
           echo "judging $count bundles in ${{ matrix.shard }}"
           failures=0
           for bundle in $bundles; do
-            if ! openoj judge "$bundle"; then failures=$((failures + 1)); fi
+            if ! coderpuzzle judge "$bundle"; then failures=$((failures + 1)); fi
           done
           echo "bundles with failures in ${{ matrix.shard }}: $failures"
           exit $((failures > 0))

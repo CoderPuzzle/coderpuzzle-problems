@@ -27,10 +27,10 @@ there is no deduplication. Both methods are judged exactly against this scheme.
 ```text
 Input:
 ["UrlCodec", "shorten", "shorten", "expand"]
-[[], ["https://openoj.example/a"], ["https://openoj.example/b"], ["http://tinyurl.com/2"]]
-Output: [null, "http://tinyurl.com/1", "http://tinyurl.com/2", "https://openoj.example/b"]
+[[], ["https://coderpuzzle.example/a"], ["https://coderpuzzle.example/b"], ["http://tinyurl.com/2"]]
+Output: [null, "http://tinyurl.com/1", "http://tinyurl.com/2", "https://coderpuzzle.example/b"]
 Explanation: The second encoded URL gets position 2, so expanding
-"http://tinyurl.com/2" recovers "https://openoj.example/b".
+"http://tinyurl.com/2" recovers "https://coderpuzzle.example/b".
 ```
 
 ### Constraints

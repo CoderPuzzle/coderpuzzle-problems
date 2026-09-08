@@ -24,7 +24,7 @@ up cleaned**: once the method returns, the judge reads back the exact set
 of cleaned cells and compares it with the reachable set. Any traversal
 that covers them all passes; a single missed cell fails.
 
-**Note (OpenOJ):** your method receives the sweeper and nothing else —
+**Note (CoderPuzzle):** your method receives the sweeper and nothing else —
 the plan, the room's dimensions, and the starting position never reach
 your code. Each of the four operations spends one unit of a 200 000-call
 budget: generous for a systematic traversal, fatal for wandering.

@@ -1,21 +1,21 @@
 // The judge's expected values are exact big integers, so the products are
 // computed with a small base-1e9 bignum. The harness serializes the return
-// value via overloaded openoj_json functions, so the bignum provides an
+// value via overloaded coderpuzzle_json functions, so the bignum provides an
 // overload that renders it as a bare integer token.
 #include <cstdint>
 
-struct OpenOjBig {
+struct CoderPuzzleBig {
     bool neg = false;
     vector<uint32_t> d; // base 1e9, little-endian; empty = zero
 };
 
-static OpenOjBig openojBigOne() { return OpenOjBig{false, {1}}; }
+static CoderPuzzleBig coderpuzzleBigOne() { return CoderPuzzleBig{false, {1}}; }
 
-static OpenOjBig openojBigMulSmall(const OpenOjBig &a, long long v) {
+static CoderPuzzleBig coderpuzzleBigMulSmall(const CoderPuzzleBig &a, long long v) {
     if (v == 0 || a.d.empty()) {
-        return OpenOjBig{};
+        return CoderPuzzleBig{};
     }
-    OpenOjBig r;
+    CoderPuzzleBig r;
     r.neg = a.neg != (v < 0);
     unsigned long long x = v < 0 ? -(unsigned long long)v : (unsigned long long)v;
     unsigned long long carry = 0;
@@ -31,11 +31,11 @@ static OpenOjBig openojBigMulSmall(const OpenOjBig &a, long long v) {
     return r;
 }
 
-static OpenOjBig openojBigMulBig(const OpenOjBig &a, const OpenOjBig &b) {
+static CoderPuzzleBig coderpuzzleBigMulBig(const CoderPuzzleBig &a, const CoderPuzzleBig &b) {
     if (a.d.empty() || b.d.empty()) {
-        return OpenOjBig{};
+        return CoderPuzzleBig{};
     }
-    OpenOjBig r;
+    CoderPuzzleBig r;
     r.neg = a.neg != b.neg;
     r.d.assign(a.d.size() + b.d.size() + 1, 0);
     for (size_t i = 0; i < a.d.size(); i++) {
@@ -57,7 +57,7 @@ static OpenOjBig openojBigMulBig(const OpenOjBig &a, const OpenOjBig &b) {
     return r;
 }
 
-static string openojBigText(const OpenOjBig &b) {
+static string coderpuzzleBigText(const CoderPuzzleBig &b) {
     if (b.d.empty()) {
         return "0";
     }
@@ -71,31 +71,31 @@ static string openojBigText(const OpenOjBig &b) {
     return s;
 }
 
-static string openoj_json(const OpenOjBig &value) { return openojBigText(value); }
+static string coderpuzzle_json(const CoderPuzzleBig &value) { return coderpuzzleBigText(value); }
 
 class Solution {
   public:
-    vector<OpenOjBig> productExceptSelf(vector<int> &nums) {
+    vector<CoderPuzzleBig> productExceptSelf(vector<int> &nums) {
         // The product except nums[i] factors as (product of everything
         // before i) x (product of everything after i), both computable as
         // running products — no division, which zeros would break anyway.
         int n = nums.size();
-        vector<OpenOjBig> pre(n + 1), suf(n + 1);
+        vector<CoderPuzzleBig> pre(n + 1), suf(n + 1);
         // pre[i] = product of the i elements preceding index i.
-        pre[0] = openojBigOne();
+        pre[0] = coderpuzzleBigOne();
         for (int i = 0; i < n; i++) {
-            pre[i + 1] = openojBigMulSmall(pre[i], nums[i]);
+            pre[i + 1] = coderpuzzleBigMulSmall(pre[i], nums[i]);
         }
         // suf[i] = product of everything from index i onward.
-        suf[n] = openojBigOne();
+        suf[n] = coderpuzzleBigOne();
         for (int i = n - 1; i >= 0; i--) {
-            suf[i] = openojBigMulSmall(suf[i + 1], nums[i]);
+            suf[i] = coderpuzzleBigMulSmall(suf[i + 1], nums[i]);
         }
-        vector<OpenOjBig> answer(n);
+        vector<CoderPuzzleBig> answer(n);
         // pre[i] x suf[i+1] spans everything except nums[i] itself; a lone
         // zero zeroes every cell but its own, automatically.
         for (int i = 0; i < n; i++) {
-            answer[i] = openojBigMulBig(pre[i], suf[i + 1]);
+            answer[i] = coderpuzzleBigMulBig(pre[i], suf[i + 1]);
         }
         return answer;
     }

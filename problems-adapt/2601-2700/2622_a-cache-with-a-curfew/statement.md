@@ -14,7 +14,7 @@ class exposes three methods:
   -1 once it has expired or was never set.
 - `count()`: reports how many keys are currently un-expired.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class CurfewCache` with the three methods
 above; the generated `class Solution` keeps its `run(cacheProbe)` method,
 whose body hands your class to the bundle-provided driver:

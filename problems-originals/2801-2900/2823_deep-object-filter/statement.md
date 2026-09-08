@@ -14,7 +14,7 @@ If the deep filter operation results in an empty object or array, with no
 remaining properties, `deepFilter` should return `undefined` to indicate
 that there is no valid data left in the `filteredObject`.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 the function `deepFilter(obj, fn)` plus a class `Solution` whose
 `solve(deepCase)` hands that function to the bundle-provided case carrier:

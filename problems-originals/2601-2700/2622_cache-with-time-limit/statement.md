@@ -16,7 +16,7 @@ The class has three public methods:
   value. Otherwise it should return -1.
 - `count()`: returns the count of un-expired keys.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class TimeLimitedCache` with the three methods above; the generated
 `class Solution` keeps its `run(cacheCase)` method, whose body hands your

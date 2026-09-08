@@ -20,7 +20,7 @@ object.
 
 Try to build it without reaching for the built-in array methods.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission
 declares `class Solution` with the method `solve(eachCase)`, where
 `eachCase` is a bundle-provided `EachCase` carrying `.arr`, the JSON

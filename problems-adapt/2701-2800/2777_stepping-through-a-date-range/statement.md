@@ -8,7 +8,7 @@ lands on: the first date, then the date one step later, and so on. A
 date that would land beyond the end is not produced. Every produced
 date is the calendar day itself, written `"YYYY-MM-DD"`.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission defines a generator function
 `dateStepper(start, end, step)` that yields one date string per step,
 and declares a class `Solution` whose `run(dateStepCase)` hands that

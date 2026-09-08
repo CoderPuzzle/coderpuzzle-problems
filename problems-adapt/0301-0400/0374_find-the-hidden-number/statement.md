@@ -12,7 +12,7 @@ it by querying a problem-provided `NumberJudge` object. Calling
 
 Return the hidden value.
 
-**OpenOJ interface:** implement `locateHiddenNumber(numberJudge, n)` on the
+**CoderPuzzle interface:** implement `locateHiddenNumber(numberJudge, n)` on the
 `Solution` class. Use `numberJudge.compareGuess(num)` to make a query.
 
 ### Example 1

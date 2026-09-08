@@ -10,7 +10,7 @@ An empty array contains no elements.
 
 You may assume the object or array is the output of JSON.parse.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Each case stores `obj`
 as raw JSON text; the bundle-provided case carrier runs that text through
 JSON.parse exactly as quoted above, so your code receives a genuine

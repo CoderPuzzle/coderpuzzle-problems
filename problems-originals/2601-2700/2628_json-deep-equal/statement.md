@@ -21,7 +21,7 @@ they are valid JSON.
 
 Please solve it without using lodash's _.isEqual() function
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Each case stores its two
 values as raw JSON text; the bundle-provided case carrier runs that text
 through JSON.parse exactly as quoted above, so your code receives genuine

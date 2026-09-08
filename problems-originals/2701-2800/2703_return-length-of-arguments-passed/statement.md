@@ -5,7 +5,7 @@
 Write a function argumentsLength that returns the count of arguments passed
 to it.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `solve(argsCase)`, where `argsCase` is a
 bundle-provided `ArgsCase` carrying `.args`, the JSON array of values this

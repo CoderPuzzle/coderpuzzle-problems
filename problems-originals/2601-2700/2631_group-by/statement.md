@@ -18,7 +18,7 @@ array. Any order of keys is acceptable.
 
 Please solve it without lodash's _.groupBy function.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript only —
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript only —
 LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `groupBy(groupCase)`, where `groupCase` is a
 bundle-provided `GroupCase` carrying `.fn`, the callable built from the case's

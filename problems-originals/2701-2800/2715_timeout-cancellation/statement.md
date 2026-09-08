@@ -18,7 +18,7 @@ it should cancel the delayed execution of fn. Otherwise, if cancelFn is
 not invoked within the specified delay t, fn should be executed with the
 provided args as arguments.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. It is also judged on a
 deterministic virtual clock instead of real timers: your submission
 declares `function cancellable(fn, args, t)` plus a class Solution whose

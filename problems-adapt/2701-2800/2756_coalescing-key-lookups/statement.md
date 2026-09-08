@@ -32,7 +32,7 @@ window share a single throttled dispatch.
 
 ![diagram](figures/2756-1.svg)
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and it is judged on a deterministic virtual clock instead of real
 timers. Your entry point is a class `Solution` with `run(driver)`, where
 the provided `driver` exposes:

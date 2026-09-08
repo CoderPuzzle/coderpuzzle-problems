@@ -16,7 +16,7 @@ value where Boolean(value) returns true.
 
 Please solve it without the built-in Array.filter method.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `solve(filterCase)`, where `filterCase`
 is a bundle-provided `FilterCase` carrying `.arr`, the integer array under

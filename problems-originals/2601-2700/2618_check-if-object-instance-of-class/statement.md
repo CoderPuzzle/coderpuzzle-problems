@@ -9,7 +9,7 @@ of a given class if that object has access to that class's methods.
 There are no constraints on the data types that can be passed to the
 function. For example, the value or the class could be undefined.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `solve(instanceOfCase)`, where
 `instanceOfCase` is a bundle-provided `InstanceOfCase` carrying `.obj`, the

@@ -8,7 +8,7 @@ Call the object with any method name at all, and the call hands back
 that very name. `obj.hello91()` answers `"hello91"`; a name of pure
 punctuation answers itself just the same.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `callMethod(anyMethodProbe)`, where `anyMethodProbe` is a bundle-provided
 `AnyMethodProbe` carrying `.method`, the name of the method under test.

@@ -20,7 +20,7 @@ an error message string, but any value is legal.
 Do not reach for the built-in `Promise.allSettled()` — collecting the
 reports is the exercise.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and its timing runs on a deterministic virtual clock instead of
 real timers. Your submission defines `settleAll(functions)` and declares
 a class `Solution` whose `run(driver)` hands that function to the

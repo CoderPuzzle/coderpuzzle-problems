@@ -17,7 +17,7 @@ Calling the returned function then invokes `fn` with the elements of that
 merged list passed as separate arguments, and hands back whatever `fn`
 returns.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission implements `var preload = function(fn, args) { ... }`,
 which returns the merged-call function described above, and declares
 `class Solution` with the method `runPartial(preloadCase)`, where

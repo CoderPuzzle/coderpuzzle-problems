@@ -18,7 +18,7 @@ occupies one contiguous stretch. Whenever `nums[i] == nums[j]` for some
 Partition `nums` into its maximal blocks of equal values — its runs —
 and return how many blocks there are.
 
-**Note (OpenOJ):** your `countBlocks` method receives the `VastArray` as
+**Note (CoderPuzzle):** your `countBlocks` method receives the `VastArray` as
 its only argument. A test case describes `nums` by its maximal blocks —
 each block as a `[value, count]` pair — and the judge builds the
 `VastArray` from that description, so arrays far too large to list

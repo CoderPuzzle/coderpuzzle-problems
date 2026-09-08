@@ -10,7 +10,7 @@ chain passes through the class's prototype object.
 Either argument can be anything JavaScript allows, including `undefined`,
 primitives, built-in constructors, or freshly declared classes.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `solve(instanceProbe)`, where `instanceProbe` is a bundle-provided
 `InstanceProbe` carrying `.obj`, the value on the left of the check, and

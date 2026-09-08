@@ -10,7 +10,7 @@ container's own top level matters: an object whose every stored value is
 itself an empty container is still nonempty, and so is an array whose
 single element is `null` or `0`.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Each case stores `obj` as raw JSON text, and the bundle-provided
 case carrier runs that text through `JSON.parse` before your code sees
 it, so you always receive a genuine JavaScript object or array. Declare

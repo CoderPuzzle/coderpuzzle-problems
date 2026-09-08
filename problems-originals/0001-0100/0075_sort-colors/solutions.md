@@ -27,7 +27,7 @@ compare equal within each block, so their original arrangement is
 irrelevant.
 
 The sort happens in place on `nums` (the only auxiliary state is the
-three-slot counter), and the array is returned as the OpenOJ signature
+three-slot counter), and the array is returned as the CoderPuzzle signature
 requires, where the LeetCode version instead modifies in place with no
 return value. The statement's follow-up teases a one-pass Dutch-national-
 flag partition; the counting approach trades that extra pass for noticeably

@@ -23,9 +23,9 @@ digit sum is 3 + 2 + 5 + 2 + 5 + 1 + 8 = 26.
 ### Example 2
 
 ```text
-Input: s = "openoj", k = 2
+Input: s = "coderpuzzle", k = 2
 Output: 3
-Explanation: "openoj" becomes "(15)(16)(5)(14)(15)(10)" → "15165141510",
+Explanation: "coderpuzzle" becomes "(15)(16)(5)(14)(15)(10)" → "15165141510",
 whose digit sum is 30; folding once more turns 30 into 3 + 0 = 3.
 ```
 

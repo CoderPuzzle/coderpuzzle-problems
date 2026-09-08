@@ -11,7 +11,7 @@ at the end of the args.
 partialFn should return a result of fn. fn should be called with the
 elements of the modified args passed as separate arguments.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission implements
 `var partial = function(fn, args) { ... }`, which returns the `partialFn`
 described above, and declares `class Solution` with the method

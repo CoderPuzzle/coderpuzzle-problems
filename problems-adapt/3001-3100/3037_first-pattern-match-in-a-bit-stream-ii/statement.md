@@ -16,7 +16,7 @@ the earliest index `i` such that the bits delivered at positions
 `i, i+1, …, i+m−1` reproduce the pattern exactly, counting the very first
 bit `next()` ever produced as position 0.
 
-**Note (OpenOJ):** this problem is offered in Python 3 and Java only. The
+**Note (CoderPuzzle):** this problem is offered in Python 3 and Java only. The
 signature is `findPattern(stream, pattern)`; the feed allows 1 000 000
 `next` calls, and reading past the recorded prefix raises an error — a
 correct solution finds its match long before ever getting there.

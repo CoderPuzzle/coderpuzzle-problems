@@ -11,7 +11,7 @@ either an integer or another multi-dimensional array. The walk visits
 each array's elements from left to right, yielding every integer it
 meets and descending into every array it meets the same way.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — no other language is offered for it. Your submission declares
 `function* yieldFlat(arr)` at top level; the generated `class Solution`
 keeps its `run(nestCase)` method, whose body hands your generator

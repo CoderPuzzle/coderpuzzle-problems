@@ -24,7 +24,7 @@ The `Ring` class offers these operations:
 
 Return `ans`, the number of houses on the ring.
 
-**Note (OpenOJ):** the signature is `houseCount(ring, k)`; the ring
+**Note (CoderPuzzle):** the signature is `houseCount(ring, k)`; the ring
 arrives as the `Ring` object handed to your method, your starting
 position is fixed by the input, and every `closeDoor`, `isDoorOpen`,
 and `moveRight` call spends one unit of an ample 4 000 000-operation

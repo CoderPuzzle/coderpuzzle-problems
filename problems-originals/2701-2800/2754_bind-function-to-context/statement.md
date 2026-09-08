@@ -33,7 +33,7 @@ bindPolyfill method.
 
 Please solve it without the built-in Function.bind method.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `bindWithContext(fnCase)`, where `fnCase`
 is a bundle-provided `FnCase` carrying `.fn`, the callable built from the

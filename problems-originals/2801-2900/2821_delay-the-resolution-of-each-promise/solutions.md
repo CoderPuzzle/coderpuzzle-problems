@@ -15,7 +15,7 @@ are delayed alike, and Promise semantics make whichever settlement call
 arrives first final while late calls are ignored, so nothing extra is
 needed to keep an already-decided promise honest. Because each output
 entry owns one inner promise and one timer, mapping preserves the input
-order of the judged settle timestamps; on OpenOJ's virtual clock the
+order of the judged settle timestamps; on CoderPuzzle's virtual clock the
 internals' own delays and this wrapper's added delay arm against one
 deterministic schedule captured by the harness, so Example 1 records
 30 + 50 = 80 regardless of wall-clock noise.

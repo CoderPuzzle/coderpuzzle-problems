@@ -16,7 +16,7 @@ pattern exactly, where position 0 is the first bit `next()` ever returned.
 The judge guarantees that a match begins somewhere within the bits it has
 recorded.
 
-**Note (OpenOJ):** the signature is `firstMatchIndex(stream, pattern)`; the
+**Note (CoderPuzzle):** the signature is `firstMatchIndex(stream, pattern)`; the
 channel permits 1 000 000 `next` calls, and reading beyond the recorded
 prefix fails — reaching that point at all means the search went wrong.
 

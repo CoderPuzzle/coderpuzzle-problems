@@ -22,7 +22,7 @@ single object:
 - If a key is included in both objects, the value in the object from arr2
   should override the value from arr1.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your entry point is a
 class `Solution` with `run(caseRunner)`; inside it, call
 `caseRunner.check(this)`. The case runner then hands your

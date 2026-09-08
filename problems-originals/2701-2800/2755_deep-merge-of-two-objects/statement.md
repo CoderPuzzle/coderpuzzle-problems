@@ -20,7 +20,7 @@ by these rules:
 Both inputs are valid JSON values, and you may assume obj1 and obj2 are
 the output of a JSON.parse call.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — the original provides no other languages for it.
 
 ### Example 1

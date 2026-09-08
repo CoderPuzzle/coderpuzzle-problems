@@ -6,7 +6,7 @@ Write code that enhances all date objects such that you can call the
 date.nextDay() method on any date object and it will return the next day
 in the format YYYY-MM-DD as a string.
 
-**Note (OpenOJ):** on LeetCode this problem is offered in JavaScript and
+**Note (CoderPuzzle):** on LeetCode this problem is offered in JavaScript and
 TypeScript only, and there the submission keeps that original shape — add
 `nextDay()` to `Date.prototype` (TypeScript merges the method into the
 global `Date` interface), then declare `nextDay(date)`, which constructs

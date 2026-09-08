@@ -7,7 +7,7 @@ counter hands back `n`, and every call after that hands back one more
 than the call before it — so the answers run `n`, `n + 1`, `n + 2`, and
 so on.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `run(counterProbe)`, where `counterProbe` is a bundle-provided
 `CounterProbe` carrying `.n`, the integer above, and `.calls`, one

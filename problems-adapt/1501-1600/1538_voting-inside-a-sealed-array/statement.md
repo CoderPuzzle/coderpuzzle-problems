@@ -19,7 +19,7 @@ Implement `callMajority(sealedBag)` — a value is a majority when it
 appears strictly more than `length / 2` times; if one exists, return the
 index of any entry holding it.
 
-**Note (OpenOJ):** the judge hands your method a `SealedBag` wired to the
+**Note (CoderPuzzle):** the judge hands your method a `SealedBag` wired to the
 hidden array and accepts any index whose entry holds the majority value
 (checked against an accepted set); when no majority exists it expects
 `-1`.

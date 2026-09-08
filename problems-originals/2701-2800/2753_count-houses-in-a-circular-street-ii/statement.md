@@ -26,7 +26,7 @@ house of housen is house1.
 
 Return `ans` which represents the number of houses on this street.
 
-**Note (OpenOJ):** the signature is `houseCount(street, k)`; the street
+**Note (CoderPuzzle):** the signature is `houseCount(street, k)`; the street
 arrives as the `Street` object handed to your method, with your starting
 position fixed by the input, and every `closeDoor`, `isDoorOpen`, and
 `moveRight` call counts against an ample budget of 4 000 000 operations.

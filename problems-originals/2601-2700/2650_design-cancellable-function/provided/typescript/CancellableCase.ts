@@ -61,19 +61,20 @@ class CancellableClock {
     }
 }
 
-const openojCancellableClock = new CancellableClock();
+const coderpuzzleCancellableClock = new CancellableClock();
 // Ambient timer name for submissions (the judge compiles with ES libs
 // only): at run time this resolves to the virtual patched version below.
 declare const setTimeout: (callback: (...args: any[]) => void, delay?: number) => number;
-const openojBuiltinSetTimeout: (callback: (...args: any[]) => void, delay?: number) => unknown = (globalThis as any)
-    .setTimeout;
+const coderpuzzleBuiltinSetTimeout: (callback: (...args: any[]) => void, delay?: number) => unknown = (
+    globalThis as any
+).setTimeout;
 
-(globalThis as any).setTimeout = function openojVirtualSetTimeout(
+(globalThis as any).setTimeout = function coderpuzzleVirtualSetTimeout(
     callback: (...args: any[]) => void,
     delay?: number,
 ): number {
-    void (openojBuiltinSetTimeout as any);
-    openojCancellableClock.scheduleFrom(openojCancellableClock.now, Number(delay) || 0, callback);
+    void (coderpuzzleBuiltinSetTimeout as any);
+    coderpuzzleCancellableClock.scheduleFrom(coderpuzzleCancellableClock.now, Number(delay) || 0, callback);
     return 0;
 };
 
@@ -97,21 +98,21 @@ class CancellableCase {
             callback: (...args: any[]) => void,
             delay?: number,
         ) {
-            openojCancellableClock.scheduleFrom(openojCancellableClock.now, Number(delay) || 0, callback);
+            coderpuzzleCancellableClock.scheduleFrom(coderpuzzleCancellableClock.now, Number(delay) || 0, callback);
             return 0;
         }) as () => Generator;
         this.generatorFactory = build;
     }
 
     clockSize(): number {
-        return openojCancellableClock.size;
+        return coderpuzzleCancellableClock.size;
     }
 
     // One macrotask hop on the REAL clock: every pending microtask —
     // however many earlier hops create — drains before it resolves.
     static hop(): Promise<void> {
         return new Promise<void>((resolve) => {
-            openojBuiltinSetTimeout(resolve, 0);
+            coderpuzzleBuiltinSetTimeout(resolve, 0);
         });
     }
 
@@ -158,7 +159,7 @@ class CancellableCase {
                 throw new Error("Virtual tick cap exceeded");
             }
             await CancellableCase.hop();
-            openojCancellableClock.fireNext();
+            coderpuzzleCancellableClock.fireNext();
             await CancellableCase.hop();
         }
         await CancellableCase.hop();

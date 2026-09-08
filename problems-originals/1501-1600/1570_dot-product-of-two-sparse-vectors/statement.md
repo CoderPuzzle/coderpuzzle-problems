@@ -16,7 +16,7 @@ SparseVector.
 
 Follow up: What if only one of the vectors is sparse?
 
-**Note (OpenOJ):** this problem judges the exact two-object API. A case
+**Note (CoderPuzzle):** this problem judges the exact two-object API. A case
 constructs two independent `SparseVector` instances (named `v1` and
 `v2`), then calls `dotProduct` on one of them handing the other live
 object over — the submission's `dotProduct` receives an actual

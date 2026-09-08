@@ -33,7 +33,7 @@ Properties of the mutator function:
 - It never calls methods on a proxied object (push, shift, etc).
 - It never assigns objects (`proxy.x = {}`).
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Judging compares only the differences between each produced value
 and the original `obj` — a full structural diff is too expensive — and
 any change that leaks into the original fails the case. Your submission

@@ -25,7 +25,7 @@ another delay period of 80ms + t.
 
 ![diagram](figures/2676-1.svg)
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. It is also judged on a
 deterministic virtual clock instead of real timers: your submission declares
 `function throttle(fn, t)` plus a class Solution whose `run` method hands

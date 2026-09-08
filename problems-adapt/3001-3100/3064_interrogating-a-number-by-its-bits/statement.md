@@ -13,7 +13,7 @@ method — that responds to exactly one kind of question:
 
 Use those replies to reconstruct the hidden value, and return `n`.
 
-**Note (OpenOJ):** the signature is `findNumber(maskedNumber)`; the API
+**Note (CoderPuzzle):** the signature is `findNumber(maskedNumber)`; the API
 arrives as the `MaskedNumber` object handed to your method — call
 `maskedNumber.commonSetBits(num)` to query it.
 

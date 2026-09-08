@@ -16,7 +16,7 @@ Return the first starting index where the pattern matches the bits read
 from the stream. For example, if the pattern is `[1, 0]`, the first match
 is the highlighted part in the stream `[0, 1, 0, 1, ...]`.
 
-**Note (OpenOJ):** this problem is offered in Python 3 and Java only. The
+**Note (CoderPuzzle):** this problem is offered in Python 3 and Java only. The
 signature is `findPattern(stream, pattern)`; the stream's budget is ample
 (1 000 000 `next` calls), and reading past the recorded prefix raises an
 error — a correct solution stops at the first match long before that.

@@ -21,7 +21,7 @@ and any attempt to work around the judge is disqualified.
 The queried rectangle is guaranteed to hold **at most 10 ships** — without
 that promise, no approach could finish inside the budget.
 
-**Note (OpenOJ):** the signature is `countHiddenShips(ocean, topRight,
+**Note (CoderPuzzle):** the signature is `countHiddenShips(ocean, topRight,
 bottomLeft)`; corners arrive as plain `[x, y]` pairs, not as a point class.
 The queried box may be a single row, a single column, or a lone point.
 

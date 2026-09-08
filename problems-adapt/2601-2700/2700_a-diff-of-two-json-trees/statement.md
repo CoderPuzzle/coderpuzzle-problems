@@ -17,7 +17,7 @@ Arrays compare positionally: an index plays the role of a key.
 
 Both inputs are valid JSON — whatever `JSON.parse` produces.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `solve(treeDiffCase)`, where `treeDiffCase` is a bundle-provided
 `TreeDiffCase` carrying `.obj1` and `.obj2`, the two deeply nested

@@ -16,7 +16,7 @@ only to initialize the structure internally — you must work through the
 interface alone, without modifying the list, and produce the values in
 reverse order.
 
-**Note (OpenOJ):** instead of printing to stdout, call `emitValue()` on
+**Note (CoderPuzzle):** instead of printing to stdout, call `emitValue()` on
 each node in the order the values should be printed — every call is
 recorded and the recorded sequence is what the judge compares. Implement
 `emitListInReverse(head)`.

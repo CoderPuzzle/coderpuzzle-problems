@@ -51,11 +51,11 @@ class RaceClock {
     }
 }
 
-const openojRaceClock = new RaceClock();
-const openojBuiltinSetTimeout = globalThis.setTimeout;
-globalThis.setTimeout = function openojVirtualSetTimeout(callback, delay) {
-    void openojBuiltinSetTimeout;
-    openojRaceClock.scheduleFrom(openojRaceClock.now, Number(delay) || 0, callback);
+const coderpuzzleRaceClock = new RaceClock();
+const coderpuzzleBuiltinSetTimeout = globalThis.setTimeout;
+globalThis.setTimeout = function coderpuzzleVirtualSetTimeout(callback, delay) {
+    void coderpuzzleBuiltinSetTimeout;
+    coderpuzzleRaceClock.scheduleFrom(coderpuzzleRaceClock.now, Number(delay) || 0, callback);
     return 0;
 };
 
@@ -71,7 +71,7 @@ class RaceCase {
         // same virtual clock: an inner arrow's bare `setTimeout` resolves
         // to this parameter even without the patch.
         this.fn = new Function("setTimeout", "return (" + source + ");")(function (callback, delay) {
-            openojRaceClock.scheduleFrom(openojRaceClock.now, Number(delay) || 0, callback);
+            coderpuzzleRaceClock.scheduleFrom(coderpuzzleRaceClock.now, Number(delay) || 0, callback);
             return 0;
         });
         this.outcome = null;
@@ -111,7 +111,7 @@ class RaceCase {
                 throw new Error("Virtual tick cap exceeded");
             }
             await RaceCase.hop();
-            openojRaceClock.fireNext();
+            coderpuzzleRaceClock.fireNext();
             await RaceCase.hop();
         }
         await RaceCase.hop();
@@ -124,14 +124,14 @@ class RaceCase {
     }
 
     clockSize() {
-        return openojRaceClock.size;
+        return coderpuzzleRaceClock.size;
     }
 
     // One macrotask hop on the REAL clock: every pending microtask —
     // however many earlier hops create — drains before it resolves.
     static hop() {
         return new Promise((resolve) => {
-            openojBuiltinSetTimeout.call(null, resolve, 0);
+            coderpuzzleBuiltinSetTimeout.call(null, resolve, 0);
         });
     }
 

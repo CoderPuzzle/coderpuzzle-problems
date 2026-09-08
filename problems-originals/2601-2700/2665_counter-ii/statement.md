@@ -11,7 +11,7 @@ increment() increases the current value by 1 and then returns it.
 decrement() reduces the current value by 1 and then returns it.
 reset() sets the current value to init and then returns it.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript only —
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript only —
 LeetCode offers no other languages for it. Your submission declares `class
 Solution` with the method `run(counterCase)`, where `counterCase` is a
 bundle-provided `CounterIICase` carrying `.init`, the integer above, and

@@ -16,7 +16,7 @@ If the length of the array is 0, the function should return init.
 
 Please solve it without using the built-in Array.reduce method.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `function reduce(nums, fn, init)` plus a class Solution whose `reduce`
 method hands your function to the bundle-provided case carrier:

@@ -11,7 +11,7 @@ excluded. In other words, only the first key should be added to the object.
 If the key is not a string, it should be converted into a string by calling
 String() on it.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript only
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript only
 — LeetCode offers no other languages for it. Your entry point is a class
 `Solution` with `run(caseRunner)`; inside it, call `caseRunner.check(this)`.
 The case runner then hands your `createObject(keysArr, valuesArr)` method the

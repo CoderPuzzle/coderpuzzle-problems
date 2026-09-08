@@ -27,7 +27,7 @@ receiver for that one call, and `2` and `1` arrive as `zone` and
 
 Solve this without using the built-in `Function.call` method.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `callWithContext(borrowCase)`, where `borrowCase` is a bundle-provided
 `BorrowCase` carrying `.fn`, the callable built from the case's function

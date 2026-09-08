@@ -57,11 +57,11 @@ class AbortClock {
     }
 }
 
-const openojAbortClock = new AbortClock();
-const openojBuiltinSetTimeout = globalThis.setTimeout;
-globalThis.setTimeout = function openojVirtualSetTimeout(callback, delay) {
-    void openojBuiltinSetTimeout;
-    openojAbortClock.scheduleFrom(openojAbortClock.now, Number(delay) || 0, callback);
+const coderpuzzleAbortClock = new AbortClock();
+const coderpuzzleBuiltinSetTimeout = globalThis.setTimeout;
+globalThis.setTimeout = function coderpuzzleVirtualSetTimeout(callback, delay) {
+    void coderpuzzleBuiltinSetTimeout;
+    coderpuzzleAbortClock.scheduleFrom(coderpuzzleAbortClock.now, Number(delay) || 0, callback);
     return 0;
 };
 
@@ -77,7 +77,7 @@ class AbortCase {
         // same virtual clock: a bare `setTimeout` inside the case's
         // generator body resolves to this parameter even without the patch.
         const build = new Function("setTimeout", "return (" + source + ");")(function (callback, delay) {
-            openojAbortClock.scheduleFrom(openojAbortClock.now, Number(delay) || 0, callback);
+            coderpuzzleAbortClock.scheduleFrom(coderpuzzleAbortClock.now, Number(delay) || 0, callback);
             return 0;
         });
         this.generatorFactory = build;
@@ -126,7 +126,7 @@ class AbortCase {
                 throw new Error("Virtual tick cap exceeded");
             }
             await AbortCase.hop();
-            openojAbortClock.fireNext();
+            coderpuzzleAbortClock.fireNext();
             await AbortCase.hop();
         }
         await AbortCase.hop();
@@ -139,14 +139,14 @@ class AbortCase {
     }
 
     clockSize() {
-        return openojAbortClock.size;
+        return coderpuzzleAbortClock.size;
     }
 
     // One macrotask hop on the REAL clock: every pending microtask —
     // however many earlier hops create — drains before it resolves.
     static hop() {
         return new Promise((resolve) => {
-            openojBuiltinSetTimeout.call(null, resolve, 0);
+            coderpuzzleBuiltinSetTimeout.call(null, resolve, 0);
         });
     }
 

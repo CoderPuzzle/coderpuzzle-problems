@@ -3,7 +3,7 @@
 
 The formatter implementation and every tool pin live in ONE place: the
 coderpuzzle runner image's `formatters.py` (see coderpuzzle/runner/formatters.py —
-the editor's Format button and the `openoj format` CLI use the same
+the editor's Format button and the `coderpuzzle format` CLI use the same
 module). This file is only a loader: it imports that implementation from
 wherever it is available so that generation (gen_starters), checking
 (check.py), CI (inside the image), and the editor all format
@@ -49,7 +49,7 @@ def _load_formatters():
         module_path = directory / "formatters.py"
         if not module_path.is_file():
             continue
-        spec = importlib.util.spec_from_file_location("openoj_formatters", module_path)
+        spec = importlib.util.spec_from_file_location("coderpuzzle_formatters", module_path)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         return module
@@ -124,15 +124,9 @@ FORMATTABLE = set(EXTENSION_LANGUAGE)
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--check", action="store_true", help="report unformatted files, change nothing"
-    )
-    parser.add_argument(
-        "--tolerant", action="store_true", help="skip missing tools instead of failing"
-    )
-    parser.add_argument(
-        "targets", nargs="*", help="bundles or files (default: everything)"
-    )
+    parser.add_argument("--check", action="store_true", help="report unformatted files, change nothing")
+    parser.add_argument("--tolerant", action="store_true", help="skip missing tools instead of failing")
+    parser.add_argument("targets", nargs="*", help="bundles or files (default: everything)")
     arguments = parser.parse_args()
 
     unformatted = []
@@ -146,9 +140,7 @@ def main() -> None:
             if extension not in FORMATTABLE:
                 continue
             content = path.read_text(encoding="utf-8")
-            new_content = format_content(
-                extension, content, tolerant=arguments.tolerant
-            )
+            new_content = format_content(extension, content, tolerant=arguments.tolerant)
             if new_content != content:
                 if arguments.check:
                     try:
@@ -165,10 +157,7 @@ def main() -> None:
             print(f"UNFORMATTED {path}")
         print(f"format check: {len(unformatted)} unformatted files")
         raise SystemExit(1 if unformatted else 0)
-    print(
-        f"formatted {formatted_count} files"
-        + (f" (skipped: {sorted(_missing)})" if _missing else "")
-    )
+    print(f"formatted {formatted_count} files" + (f" (skipped: {sorted(_missing)})" if _missing else ""))
 
 
 if __name__ == "__main__":

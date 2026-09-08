@@ -15,7 +15,7 @@ guarded copy settles however the race ends:
   "Time Limit Exceeded", and anything `fn` would still produce is
   discarded.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and its timing runs on a deterministic virtual clock instead of
 real timers — the bundle-provided `RaceCase` carries `.fn`, the callable
 built from the case's function source, plus `.inputs` and `.t`, and both
@@ -29,7 +29,7 @@ returned promise, and compares the outcome object exactly:
 `{"resolved": <settlement value>}` when fn wins the race or
 `{"rejected": <rejection reason>}` when the deadline wins, including
 `"Time Limit Exceeded"` for the deadline. The crawled Output column
-additionally displayed a wall-clock `"time"` field; OpenOJ drops that
+additionally displayed a wall-clock `"time"` field; CoderPuzzle drops that
 real-time field deliberately — machine speed must not decide answers —
 and judges only the settled outcome above.
 

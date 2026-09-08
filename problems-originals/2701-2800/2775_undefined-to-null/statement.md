@@ -9,7 +9,7 @@ undefined values are handled differently than null values when objects are
 converted to a JSON string using JSON.stringify(). This function helps ensure
 serialized data is free of unexpected errors.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript only —
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript only —
 LeetCode offers no other languages for it. Your entry point is a class
 `Solution` with `run(caseRunner)`; inside it, call `caseRunner.check(this)`.
 The case runner then hands your `undefinedToNull(obj)` method a freshly built

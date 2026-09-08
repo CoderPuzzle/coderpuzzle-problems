@@ -21,7 +21,7 @@ alongside the array.
 Making more than **100 calls to `get`** is judged wrong (the oracle's
 budget; `length()` is free), so a linear scan is not an option.
 
-**Note (OpenOJ):** this problem is offered in Python 3 and Java only. The
+**Note (CoderPuzzle):** this problem is offered in Python 3 and Java only. The
 signature is `findInMountainArray(mountainArr, target)`.
 
 ### Example 1

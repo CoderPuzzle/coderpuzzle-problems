@@ -38,7 +38,7 @@ A sketch of the intended usage:
 Had cancel() never fired, or fired only after t=100ms, the promise would
 have resolved 5 instead.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — no other languages are offered for it — and its timing runs on a
 deterministic virtual clock instead of real timers. The bundle-provided
 `AbortCase` carries `.source`, the case's `generatorFunction` source (it

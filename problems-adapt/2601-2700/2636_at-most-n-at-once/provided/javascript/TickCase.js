@@ -10,7 +10,7 @@
 //   verdict() reports [[start ticks], [end ticks]]. Real time and real
 //   timers have no influence on what is judged; only the schedule is.
 
-const openojBuiltinSetTimeout = globalThis.setTimeout;
+const coderpuzzleBuiltinSetTimeout = globalThis.setTimeout;
 
 class PoolClock {
     constructor() {
@@ -116,7 +116,7 @@ class TickCase {
     // however many earlier hops create — drains before it resolves.
     static hop() {
         return new Promise((resolve) => {
-            openojBuiltinSetTimeout.call(null, resolve, 0);
+            coderpuzzleBuiltinSetTimeout.call(null, resolve, 0);
         });
     }
 

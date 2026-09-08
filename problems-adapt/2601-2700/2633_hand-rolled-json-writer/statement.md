@@ -12,7 +12,7 @@ each other arbitrarily.
 The built-in `JSON.stringify` is off limits — writing the serializer is the
 exercise.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `stringifyValue(valueCase)`, where `valueCase` is a bundle-provided
 `ValueCase` carrying `.object`, the live decoded value to serialize, with

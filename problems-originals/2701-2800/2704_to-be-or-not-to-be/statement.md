@@ -11,7 +11,7 @@ functions.
 - notToBe(val) accepts another value and returns true if the two values !==
   each other. If they are equal, it should throw an error "Equal".
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 the function expect(val) plus a class Solution whose run(expectCase) hands
 that function to the bundle-provided case carrier:

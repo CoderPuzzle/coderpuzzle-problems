@@ -21,7 +21,7 @@ Implement the `RandomizedCollection` class:
 ### Deterministic judging rule
 
 In the original formulation `getRandom` picks an element uniformly at random,
-which cannot be compared against an expected output. OpenOJ therefore judges a
+which cannot be compared against an expected output. CoderPuzzle therefore judges a
 **deterministic variant** in which the collection behaves as if it were backed
 by a plain array `a` maintained under exactly these rules:
 

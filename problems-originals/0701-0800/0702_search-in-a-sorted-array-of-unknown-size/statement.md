@@ -18,7 +18,7 @@ The array is strictly increasing and every real element is far below
 2147483647, so the sentinel is unambiguous: reading it always means "out of
 range".
 
-**Note (OpenOJ):** this problem is offered in Python 3 and Java only. The
+**Note (CoderPuzzle):** this problem is offered in Python 3 and Java only. The
 signature is `search(reader, target)`; the oracle's query budget is 10 000
 calls, generous enough for any logarithmic strategy.
 

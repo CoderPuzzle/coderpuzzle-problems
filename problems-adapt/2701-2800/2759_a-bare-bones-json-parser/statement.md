@@ -10,7 +10,7 @@ numbers, booleans) plus null as they are written.
 
 Solve it without the built-in `JSON.parse`.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — the original provides no other languages for it.
 
 ### Example 1

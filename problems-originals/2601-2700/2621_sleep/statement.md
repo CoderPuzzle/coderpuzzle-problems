@@ -8,7 +8,7 @@ sleeps for millis milliseconds. It can resolve any value.
 Note that minor deviation from millis in the actual sleep duration is
 acceptable.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `run(sleepCase)`, where `sleepCase` is a
 bundle-provided `SleepCase` carrying `.millis`, the integer above. Define

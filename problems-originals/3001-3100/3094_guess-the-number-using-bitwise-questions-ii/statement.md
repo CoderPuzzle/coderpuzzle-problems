@@ -23,7 +23,7 @@ Note: In this world, all numbers are between 0 and 2³⁰ - 1 (both inclusive),
 thus for counting common bits, we see only the first 30 bits of those
 numbers.
 
-**Note (OpenOJ):** the signature is `findNumber(commonBits)`; the API
+**Note (CoderPuzzle):** the signature is `findNumber(commonBits)`; the API
 arrives as the `CommonBits` object handed to your method — call
 `commonBits.commonBits(num)` to query it.
 

@@ -10,7 +10,7 @@ The function composition of an empty list of functions is the identity function 
 
 You may assume each function in the array accepts one integer as input and returns one integer as output.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript only — LeetCode offers no other languages for it. Your submission declares `function compose(functions)` returning the composed function, plus a class Solution whose `run` method hands your function to the bundle-provided driver:
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript only — LeetCode offers no other languages for it. Your submission declares `function compose(functions)` returning the composed function, plus a class Solution whose `run` method hands your function to the bundle-provided driver:
 `composeCase.drive(compose)`. The driver builds every case's function from its source text, hands the resulting array of callables to your `compose`, requires a function back, calls it once at `composeCase.x`, and records the returned integer — that recorded value is the judged answer shown as `Output` below. The driver also keeps a per-function call count and accepts a case only when every supplied function was called exactly once, so the returned function must genuinely thread its input through the whole chain (an empty array makes no calls and must behave as identity).
 
 ### Example 1

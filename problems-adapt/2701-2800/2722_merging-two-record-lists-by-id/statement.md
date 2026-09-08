@@ -19,7 +19,7 @@ Combining is shallow: a shared key's value is adopted wholesale, so an
 object or array sitting behind it is replaced as a whole rather than
 fused key-by-key with its counterpart.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your entry point is a class `Solution` with `run(caseRunner)`; inside
 it, call `caseRunner.check(this)`. The bundle-provided case runner then
 hands your `mergeById(arr1, arr2)` method fresh copies of both arrays and

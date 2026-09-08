@@ -12,7 +12,7 @@ every later execution is scheduled t milliseconds after the previous one
 and always receives the same args. When cancelFn runs, the schedule
 stops — executions that already happened are left untouched.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. It is judged on a deterministic virtual clock instead of real
 timers: your submission declares `function repeatable(fn, args, t)` plus
 a class Solution whose `run` method hands your function to the

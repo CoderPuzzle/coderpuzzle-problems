@@ -9,7 +9,7 @@ output.
 
 You may assume that fn will never duplicate numbers for a given array.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your entry point is a
 class `Solution` with `run(sortCase)`; inside it, call
 `sortCase.check(this)`. The case carrier then hands your `sortBy(arr, fn)`

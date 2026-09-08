@@ -18,7 +18,7 @@ The input is only given to initialize the linked list internally. You must
 solve this problem without modifying the linked list. In other words, you
 must operate the linked list using only the mentioned APIs.
 
-**Note (OpenOJ):** instead of printing to stdout, call `printValue()` on each
+**Note (CoderPuzzle):** instead of printing to stdout, call `printValue()` on each
 node in the order the values should be printed — every call is recorded and
 the recorded sequence is what the judge compares. The signature is
 `printLinkedListInReverse(head)`; the API arrives as the head node handed to

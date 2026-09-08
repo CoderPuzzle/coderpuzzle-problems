@@ -7,7 +7,7 @@ method on any array and it will return the last index of a given target
 number. nums is a sorted ascending array of numbers that may contain
 duplicates. If the target number is not found in the array, return -1.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `solve(arrCase)`, where `arrCase` is a
 bundle-provided `ArrCase` carrying `.nums`, the sorted array under test, and

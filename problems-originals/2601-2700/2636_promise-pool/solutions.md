@@ -20,7 +20,7 @@ to `functions[i]()` returns a fresh promise per call, so the pool never
 caches or re-invokes anything, and rejections cannot surface because the
 statement guarantees the inputs always fulfill.
 
-Judged on OpenOJ's virtual clock, this greedy policy produces exactly the
+Judged on CoderPuzzle's virtual clock, this greedy policy produces exactly the
 pinned schedule: with limit `n`, job i starts when the i − n'th earlier
 settlement frees its slot (or at t=0 while slots remain), and ends one
 delay later.

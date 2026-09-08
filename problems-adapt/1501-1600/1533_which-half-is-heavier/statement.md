@@ -19,7 +19,7 @@ Implement `heavierHalf(reader)` — compare half against half with as few
 `compareSub` calls as you can, and return the index of the heavier
 value.
 
-**Note (OpenOJ):** the judge hands your method a `BalanceReader` wired to
+**Note (CoderPuzzle):** the judge hands your method a `BalanceReader` wired to
 the hidden array and checks the returned index.
 
 ### Example 1

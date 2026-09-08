@@ -54,11 +54,11 @@ class DelayClock {
     }
 }
 
-const openojDelayClock = new DelayClock();
-const openojDelayBuiltinSetTimeout = globalThis.setTimeout;
-globalThis.setTimeout = function openojVirtualSetTimeout(callback, delay) {
-    void openojDelayBuiltinSetTimeout;
-    openojDelayClock.scheduleFrom(openojDelayClock.now, Number(delay) || 0, callback);
+const coderpuzzleDelayClock = new DelayClock();
+const coderpuzzleDelayBuiltinSetTimeout = globalThis.setTimeout;
+globalThis.setTimeout = function coderpuzzleVirtualSetTimeout(callback, delay) {
+    void coderpuzzleDelayBuiltinSetTimeout;
+    coderpuzzleDelayClock.scheduleFrom(coderpuzzleDelayClock.now, Number(delay) || 0, callback);
     return 0;
 };
 
@@ -81,7 +81,7 @@ class HoldCase {
         // to this parameter even without the patch.
         this.fns = sources.map((source) =>
             new Function("setTimeout", "return (" + source + ");")((callback, delay) => {
-                openojDelayClock.scheduleFrom(openojDelayClock.now, Number(delay) || 0, callback);
+                coderpuzzleDelayClock.scheduleFrom(coderpuzzleDelayClock.now, Number(delay) || 0, callback);
                 return 0;
             }),
         );
@@ -110,10 +110,10 @@ class HoldCase {
             if (typeof delayed[index] !== "function") {
                 throw new Error("every entry of the returned array must be a function");
             }
-            const startedAt = openojDelayClock.now;
+            const startedAt = coderpuzzleDelayClock.now;
             const record = () => {
                 if (this.settles[index] === null) {
-                    this.settles[index] = Math.round(openojDelayClock.now - startedAt);
+                    this.settles[index] = Math.round(coderpuzzleDelayClock.now - startedAt);
                 }
                 pending--;
             };
@@ -128,7 +128,7 @@ class HoldCase {
                 throw new Error("Virtual tick cap exceeded");
             }
             await HoldCase.hop();
-            openojDelayClock.fireNext();
+            coderpuzzleDelayClock.fireNext();
             await HoldCase.hop();
         }
         await HoldCase.hop();
@@ -139,14 +139,14 @@ class HoldCase {
     }
 
     clockSize() {
-        return openojDelayClock.size;
+        return coderpuzzleDelayClock.size;
     }
 
     // One macrotask hop on the REAL clock: every pending microtask —
     // however many earlier hops create — drains before it resolves.
     static hop() {
         return new Promise((resolve) => {
-            openojDelayBuiltinSetTimeout.call(null, resolve, 0);
+            coderpuzzleDelayBuiltinSetTimeout.call(null, resolve, 0);
         });
     }
 

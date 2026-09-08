@@ -16,7 +16,7 @@ the result in the order they are met.
 
 Solve it without reaching for the built-in `Array.flat` method.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `function flattenToDepth(arr, depth)` with
 the behavior above; the generated `class Solution` keeps its
 `run(flattenToDepthCase)` method, whose body hands your function to the

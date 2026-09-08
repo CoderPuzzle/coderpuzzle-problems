@@ -51,11 +51,11 @@ class LimitClock {
     }
 }
 
-const openojLimitClock = new LimitClock();
-const openojBuiltinSetTimeout = globalThis.setTimeout;
-globalThis.setTimeout = function openojVirtualSetTimeout(callback, delay) {
-    void openojBuiltinSetTimeout;
-    openojLimitClock.scheduleFrom(openojLimitClock.now, Number(delay) || 0, callback);
+const coderpuzzleLimitClock = new LimitClock();
+const coderpuzzleBuiltinSetTimeout = globalThis.setTimeout;
+globalThis.setTimeout = function coderpuzzleVirtualSetTimeout(callback, delay) {
+    void coderpuzzleBuiltinSetTimeout;
+    coderpuzzleLimitClock.scheduleFrom(coderpuzzleLimitClock.now, Number(delay) || 0, callback);
     return 0;
 };
 
@@ -71,7 +71,7 @@ class LimitCase {
         // same virtual clock: an inner arrow's bare `setTimeout` resolves
         // to this parameter even without the patch.
         this.fn = new Function("setTimeout", "return (" + source + ");")(function (callback, delay) {
-            openojLimitClock.scheduleFrom(openojLimitClock.now, Number(delay) || 0, callback);
+            coderpuzzleLimitClock.scheduleFrom(coderpuzzleLimitClock.now, Number(delay) || 0, callback);
             return 0;
         });
         this.outcome = null;
@@ -111,7 +111,7 @@ class LimitCase {
                 throw new Error("Virtual tick cap exceeded");
             }
             await LimitCase.hop();
-            openojLimitClock.fireNext();
+            coderpuzzleLimitClock.fireNext();
             await LimitCase.hop();
         }
         await LimitCase.hop();
@@ -124,14 +124,14 @@ class LimitCase {
     }
 
     clockSize() {
-        return openojLimitClock.size;
+        return coderpuzzleLimitClock.size;
     }
 
     // One macrotask hop on the REAL clock: every pending microtask —
     // however many earlier hops create — drains before it resolves.
     static hop() {
         return new Promise((resolve) => {
-            openojBuiltinSetTimeout.call(null, resolve, 0);
+            coderpuzzleBuiltinSetTimeout.call(null, resolve, 0);
         });
     }
 

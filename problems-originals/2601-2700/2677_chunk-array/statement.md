@@ -10,7 +10,7 @@ than size if arr.length is not evenly divisible by size.
 
 Please solve it without using lodash's _.chunk function.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `function chunk(arr, size)` with the behavior above; the generated `class
 Solution` keeps its `run(chunkCase)` method, whose body hands your function

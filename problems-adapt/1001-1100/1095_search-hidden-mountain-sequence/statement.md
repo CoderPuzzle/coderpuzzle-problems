@@ -20,7 +20,7 @@ The value you want arrives as `target`, alongside the reader. Return the
 More than **100 calls to `get`** are judged wrong (the reader's budget);
 `length()` is free, so a linear scan is simply too expensive to survive.
 
-**Note (OpenOJ):** your method receives `(reader, target)` and must draw
+**Note (CoderPuzzle):** your method receives `(reader, target)` and must draw
 everything else from the two reader operations — the sequence's shape
 included.
 

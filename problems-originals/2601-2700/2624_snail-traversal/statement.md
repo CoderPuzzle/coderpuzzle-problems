@@ -21,7 +21,7 @@ numbers in the original array.
 
 ![diagram](figures/2624-1.svg)
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission still
 enhances `Array` as described — add `snail(rowsCount, colsCount)` to
 `Array.prototype` (TypeScript merges the method into the global `Array`

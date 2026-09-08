@@ -18,7 +18,7 @@ The replies therefore never describe the original number twice in a row —
 yet what you must return is the initial `n`. Make every disturbance pay,
 undo each one, and read the value back out.
 
-**Note (OpenOJ):** the signature is `findNumber(restlessNumber)`; the API
+**Note (CoderPuzzle):** the signature is `findNumber(restlessNumber)`; the API
 arrives as the `RestlessNumber` object handed to your method — call
 `restlessNumber.commonBits(num)` to query it.
 

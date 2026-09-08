@@ -21,7 +21,7 @@ object handed to your method:
 Calling `compareSub` more than **20 times** is judged wrong; `length()`
 costs nothing.
 
-**Note (OpenOJ):** the signature is `getIndex(reader)`.
+**Note (CoderPuzzle):** the signature is `getIndex(reader)`.
 
 ### Example 1
 

@@ -1,8 +1,8 @@
-type OpenOjForEachCallback = (this: unknown, element: unknown, index: number, source: unknown[]) => unknown;
+type CoderPuzzleForEachCallback = (this: unknown, element: unknown, index: number, source: unknown[]) => unknown;
 
 (Array.prototype as unknown as Record<string, unknown>).forEach = function (
     this: unknown[],
-    callback: OpenOjForEachCallback,
+    callback: CoderPuzzleForEachCallback,
     context: unknown,
 ): void {
     // One ascending pass over the receiver's own indices, with the range

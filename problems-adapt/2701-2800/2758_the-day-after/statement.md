@@ -7,7 +7,7 @@ The input is a `"YYYY-MM-DD"` string and the return value is the next
 day rendered in exactly the same format, with every field zero-padded
 to its fixed width.
 
-**Note (OpenOJ):** on LeetCode this problem is offered in JavaScript and
+**Note (CoderPuzzle):** on LeetCode this problem is offered in JavaScript and
 TypeScript only, and there the submission keeps that original shape —
 add `dayAfter()` to `Date.prototype` (TypeScript merges the method into
 the global `Date` interface), then declare `dayAfter(date)`, which

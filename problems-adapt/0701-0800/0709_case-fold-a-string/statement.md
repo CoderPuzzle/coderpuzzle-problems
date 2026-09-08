@@ -10,8 +10,8 @@ exactly as they are.
 ### Example 1
 
 ```text
-Input: s = "OpenOJ"
-Output: "openoj"
+Input: s = "CoderPuzzle"
+Output: "coderpuzzle"
 ```
 
 ### Example 2

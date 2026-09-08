@@ -19,7 +19,7 @@ handed to your method:
 Calling `get` more than **1000 times** is judged wrong; `dimensions()` costs
 nothing.
 
-**Note (OpenOJ):** the signature is `firstColumnWithOne(matrix)`.
+**Note (CoderPuzzle):** the signature is `firstColumnWithOne(matrix)`.
 
 ### Example 1
 

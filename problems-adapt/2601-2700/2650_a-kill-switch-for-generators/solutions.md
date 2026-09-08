@@ -23,7 +23,7 @@ resolve or reject has fired — Promise settlement is already one-shot, but
 the flag also stops the stepper from calling `generator.throw` on a
 finished generator when cancel arrives late (Example 1's no-op case).
 
-On OpenOJ the whole timeline runs on a virtual clock captured by the
+On CoderPuzzle the whole timeline runs on a virtual clock captured by the
 bundle-provided driver, so both the generator internals' timers and the
 scheduled cancel arm against one deterministic schedule; only relative
 settlement order matters for the outcome.

@@ -9,7 +9,7 @@ The first time the returned function is called, it should return the same
 result as fn. Every subsequent time it is called, it should return
 undefined.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `function once(fn)` with the behavior above; the generated `class
 Solution` keeps its `run(onceCase)` method, whose body hands your function

@@ -19,7 +19,7 @@ one whose function comes first in the array wins).
 Do not reach for the built-in `Promise.all()` — the aggregation is the
 exercise.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and its timing runs on a deterministic virtual clock instead of real
 timers. Your submission defines `gatherAll(functions)` and declares a
 class `Solution` whose `run(batchDriver)` hands that function to the

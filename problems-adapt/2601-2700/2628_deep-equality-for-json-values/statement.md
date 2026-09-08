@@ -19,7 +19,7 @@ but JSON.
 
 Do not reach for lodash's `_.isEqual()`; write the comparison yourself.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Each case stores its two values as raw JSON text; the bundle-provided
 case carrier runs that text through JSON.parse exactly as quoted above, so
 your code receives genuine JavaScript values. Declare

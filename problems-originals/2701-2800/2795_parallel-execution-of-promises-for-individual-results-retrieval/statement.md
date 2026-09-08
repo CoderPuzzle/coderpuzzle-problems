@@ -20,7 +20,7 @@ maintaining the same order.
 
 Try to implement it without using the built-in method Promise.allSettled().
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and its timing runs on a deterministic virtual clock instead of real
 timers. Your submission defines `promiseAllSettled(functions)` and declares
 a class `Solution` whose `run(driver)` hands that function to the
@@ -31,7 +31,7 @@ promiseAllSettled with them, awaits the returned promise, and the judge
 compares the settled array exactly: one `{status, value}` or
 `{status, reason}` object per index, in the original order. Wall-clock
 timing is deliberately not judged: the `"t"` field in the examples below
-records how long the original harness waited, and OpenOJ drops it — only
+records how long the original harness waited, and CoderPuzzle drops it — only
 the settled values are compared, so any correct implementation produces the
 expected array regardless of machine speed.
 

@@ -15,7 +15,7 @@ You may assume `obj` is the output of `JSON.parse` — in other words, valid
 JSON. Within JSON the only falsy values are `false`, `null`, `0`, and the
 empty string `""`; `undefined` and `NaN` cannot occur.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — there are no other languages for it. Your entry point is a class
 `Solution` with `run(falsySweepCase)`; inside it, call
 `falsySweepCase.check(this)`. The bundle-provided case runner then hands

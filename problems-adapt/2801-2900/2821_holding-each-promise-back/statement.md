@@ -10,7 +10,7 @@ settles exactly `ms` milliseconds later than the original would have —
 an extra hold applied to the resolution as well as to the rejection —
 while the new array keeps the original functions' order.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and its timing runs on a deterministic virtual clock instead of
 real timers — the bundle-provided `HoldCase` carries `.fns`, the
 callables built from the case's function sources (each returns a

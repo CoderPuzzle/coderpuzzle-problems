@@ -17,7 +17,7 @@ An empty array never enters the fold, so the answer is just `init`.
 
 Do not use the built-in `Array.reduce` method; write the loop yourself.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `function foldLeft(nums, fn, init)` plus a
 class `Solution` whose `reduce` method hands your function to the
 bundle-provided case carrier: `foldLeftCase.nums`, `foldLeftCase.fn` and

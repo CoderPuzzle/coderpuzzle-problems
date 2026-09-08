@@ -19,7 +19,7 @@ submitted within that budget. `unmaskWord` returns nothing: the verdict
 comes from the interrogator's own record of whether the hidden word was
 named.
 
-**Note (OpenOJ):** the wordlist reaches your method alongside the
+**Note (CoderPuzzle):** the wordlist reaches your method alongside the
 interrogator, and the hidden word is guaranteed to be one of the listed
 words — the puzzle is only ever about narrowing, never about inventing.
 

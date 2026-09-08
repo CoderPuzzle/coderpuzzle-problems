@@ -12,7 +12,7 @@ harness at `cancelTimeMs`; if it fires before `t` has elapsed, the pending
 call is cancelled and `fn` never runs — otherwise `fn` executes on schedule
 and the late cancel changes nothing.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — there are no other languages for it. It is also judged on a
 deterministic virtual clock instead of real timers: your submission
 declares `function deferrable(fn, args, t)` plus a class `Solution` whose

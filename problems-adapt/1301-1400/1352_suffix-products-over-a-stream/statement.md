@@ -14,7 +14,7 @@ Implement the `SuffixProducts` class:
 
 Every product a call could request fits in a signed 32-bit integer.
 
-**Note (OpenOJ):** submissions here are limited to Python 3 and Java.
+**Note (CoderPuzzle):** submissions here are limited to Python 3 and Java.
 
 ### Example 1
 

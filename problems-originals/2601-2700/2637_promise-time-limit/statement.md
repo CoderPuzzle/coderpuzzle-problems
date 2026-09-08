@@ -13,7 +13,7 @@ The time limited function should follow these rules:
     If the execution of the fn exceeds the time limit, the time limited
     function should reject with the string "Time Limit Exceeded".
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and its timing runs on a deterministic virtual clock instead of real
 timers — the bundle-provided `LimitCase` carries `.fn`, the callable built
 from the case's function source, plus `.inputs` and `.t`, and both the fn
@@ -29,7 +29,7 @@ value>}` when fn wins the race or `{"rejected": <rejection reason>}`
 when the limit wins, including `"Time Limit Exceeded"` for the limit.
 The crawled Output column additionally displayed a wall-clock `"time"`
 field (Example 1 shows `{"rejected":"Time Limit Exceeded","time":50}`);
-OpenOJ drops that real-time field deliberately — machine speed must not
+CoderPuzzle drops that real-time field deliberately — machine speed must not
 decide answers — and judges only the settled outcome above.
 
 ### Example 1

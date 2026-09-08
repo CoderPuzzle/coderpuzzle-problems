@@ -5,7 +5,7 @@
 Write a function createHelloWorld. It should return a new function that
 always returns "Hello World".
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `function createHelloWorld()` with the behavior above; the generated
 `class Solution` keeps its `run(helloWorldCase)` method, whose body hands

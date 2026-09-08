@@ -12,7 +12,7 @@ keys. A value is considered falsy when Boolean(value) returns false.
 You may assume the obj is the output of JSON.parse. In other words, it is
 valid JSON.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your entry point is a
 class `Solution` with `run(caseRunner)`; inside it, call
 `caseRunner.check(this)`. The case runner then hands your

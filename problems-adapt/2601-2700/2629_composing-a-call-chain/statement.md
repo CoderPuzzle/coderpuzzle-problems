@@ -14,7 +14,7 @@ returns its input unchanged.
 Every function in the array takes one integer in and returns one integer
 out; the chained function you return does the same.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `function chainCalls(functions)` returning
 the chained function, plus a class `Solution` whose `run` method hands
 your function to the bundle-provided driver:

@@ -13,7 +13,7 @@ setTimeout(cancelFn, cancelTimeMs)
 The function fn should be called with args immediately and then called again
 every t milliseconds until cancelFn is called at cancelTimeMs ms.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. It is judged on a
 deterministic virtual clock instead of real timers: your submission declares
 `function cancellable(fn, args, t)` plus a class Solution whose `run` method

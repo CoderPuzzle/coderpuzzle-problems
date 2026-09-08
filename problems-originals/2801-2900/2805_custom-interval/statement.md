@@ -24,7 +24,7 @@ intervals.
 Note: The setTimeout and setInterval functions in Node.js return an
 object, not a number.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. It is judged on a
 deterministic virtual clock instead of real timers: your submission
 declares `function customInterval(fn, delay, period)` returning a number

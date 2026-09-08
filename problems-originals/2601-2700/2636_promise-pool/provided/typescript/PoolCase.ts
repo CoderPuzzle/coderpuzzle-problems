@@ -16,7 +16,8 @@ interface PoolTick {
     callback: () => void;
 }
 
-const openojBuiltinSetTimeout: (callback: (...args: any[]) => void, delay?: number) => unknown = globalThis.setTimeout;
+const coderpuzzleBuiltinSetTimeout: (callback: (...args: any[]) => void, delay?: number) => unknown =
+    globalThis.setTimeout;
 
 class PoolClock {
     private ticks: PoolTick[] = [];
@@ -128,7 +129,7 @@ class PoolCase {
     // however many earlier hops create — drains before it resolves.
     static hop(): Promise<void> {
         return new Promise<void>((resolve) => {
-            openojBuiltinSetTimeout(resolve, 0);
+            coderpuzzleBuiltinSetTimeout(resolve, 0);
         });
     }
 

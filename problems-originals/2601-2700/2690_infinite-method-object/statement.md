@@ -9,7 +9,7 @@ any method and it will always return the name of the method.
 
 For example, if you execute obj.abc123(), it will return "abc123".
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `callMethod(methodCase)`, where
 `methodCase` is a bundle-provided `MethodCase` carrying `.method`, the name

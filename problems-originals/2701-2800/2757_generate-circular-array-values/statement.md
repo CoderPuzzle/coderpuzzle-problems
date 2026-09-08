@@ -18,7 +18,7 @@ passed into the function (Ex: gen.next(-3)).
   that value, however if the current index is the first index, it should
   instead jump to the last index.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission defines a generator function
 `cycleGenerator(arr, startIndex)`, and declares a class `Solution` whose
 `run(cycleCase)` hands that function to the bundle-provided case carrier:

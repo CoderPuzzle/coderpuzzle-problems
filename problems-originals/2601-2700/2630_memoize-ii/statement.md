@@ -10,7 +10,7 @@ same inputs. Instead it will return a cached value.
 fn can be any function and there are no constraints on what type of values it
 accepts. Inputs are considered identical if they are === to each other.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript only —
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript only —
 LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `runMemoized(memoizeCase)`, where
 `memoizeCase` is a bundle-provided `MemoizeCase` carrying `.source`, the source

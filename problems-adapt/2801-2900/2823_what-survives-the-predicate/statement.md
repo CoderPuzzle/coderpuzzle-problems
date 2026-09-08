@@ -13,7 +13,7 @@ If the whole operation strips everything out — nothing remains at the
 root — `deepPrune` should return `undefined` to signal that no valid
 data survived.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission
 declares the function `deepPrune(obj, fn)` plus a class `Solution`
 whose `solve(pruneCase)` hands that function to the bundle-provided

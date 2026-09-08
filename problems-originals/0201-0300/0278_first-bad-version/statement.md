@@ -14,7 +14,7 @@ You are given an API `bool isBadVersion(version)` which returns whether
 `version` is bad. Implement a function to find the first bad version. You
 should minimize the number of calls to the API.
 
-**Note (OpenOJ):** the signature is `firstBadVersion(versionControl, n)`; the
+**Note (CoderPuzzle):** the signature is `firstBadVersion(versionControl, n)`; the
 API arrives as the `VersionControl` object handed to your method — call
 `versionControl.isBadVersion(version)` to query it.
 

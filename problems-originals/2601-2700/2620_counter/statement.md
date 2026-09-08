@@ -6,7 +6,7 @@ Given an integer n, return a counter function. This counter function
 initially returns n and then returns 1 more than the previous value every
 subsequent time it is called (n, n + 1, n + 2, etc).
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `run(counterCase)`, where `counterCase`
 is a bundle-provided `CounterCase` carrying `.n`, the integer above, and

@@ -25,7 +25,7 @@ JSON.parse().
 
 Note that a string literal should be thrown, not an Error.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 the function `makeImmutable(obj)` plus a class `Solution` whose
 `run(objCase)` hands that function to the bundle-provided case carrier:

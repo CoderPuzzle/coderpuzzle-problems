@@ -14,7 +14,7 @@ supports `csum(1)(2)(3)`, `csum(1)(2, 3)`, `csum(1, 2)(3)`, and
 `csum(1, 2, 3)` alike — every one of those routes must land on the same
 value the original returns.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `applyCurried(batchCase)`, where `batchCase` is a bundle-provided
 `BatchCase` carrying `.fn`, the callable built from the case's function

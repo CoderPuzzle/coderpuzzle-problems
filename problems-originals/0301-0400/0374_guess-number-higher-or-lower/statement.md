@@ -19,7 +19,7 @@ possible results:
 
 Return the number that I picked.
 
-**Note (OpenOJ):** the signature is `guessNumber(guess, n)`; the API
+**Note (CoderPuzzle):** the signature is `guessNumber(guess, n)`; the API
 arrives as the `Guess` object handed to your method — call
 `guess.guess(num)` to query it.
 

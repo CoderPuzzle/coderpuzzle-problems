@@ -6,7 +6,7 @@ Build a function `countArguments` whose whole job is to report how many
 values arrived on a single call. It must accept any number of arguments of
 any shape and return exactly that count.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — there are no other languages for it. Your submission declares
 `class Solution` with the method `solve(callArgsCase)`, where `callArgsCase`
 is a bundle-provided `CallArgsCase` carrying `.args`, the JSON array of

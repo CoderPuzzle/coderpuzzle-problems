@@ -11,7 +11,7 @@ come up short, when `arr.length` is not an exact multiple of `size`.
 
 Please solve it without reaching for lodash's `_.chunk`.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `function deal(arr, size)` with the
 behavior above; the generated `class Solution` keeps its `run(dealProbe)`
 method, whose body hands your function to the bundle-provided driver:

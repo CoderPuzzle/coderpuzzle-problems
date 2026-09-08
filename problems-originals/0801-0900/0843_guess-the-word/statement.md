@@ -18,7 +18,7 @@ call is rejected. Call `guess` with the secret word itself within the budget
 and the case passes. `findSecretWord` returns nothing — the verdict comes
 from the master's own record of whether the secret was named.
 
-**Note (OpenOJ):** this problem is offered in Python 3 and Java only. The
+**Note (CoderPuzzle):** this problem is offered in Python 3 and Java only. The
 wordlist is passed to your method alongside the master; the secret is hidden
 inside the master and is always one of the listed words.
 

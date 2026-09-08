@@ -16,7 +16,7 @@ match the `pattern` exactly. The pattern is passed to your method alongside
 the stream, and a match is guaranteed to begin within the recorded prefix of
 bits the judge holds.
 
-**Note (OpenOJ):** this problem is offered in Python 3 and Java only. The
+**Note (CoderPuzzle):** this problem is offered in Python 3 and Java only. The
 signature is `findPattern(stream, pattern)`; the stream's budget is ample
 (1 000 000 `next` calls), and reading past the recorded prefix raises an
 error — a correct solution stops at the first match long before that.

@@ -10,7 +10,7 @@ operations:
 - `decrement()` nudges the current value down by 1 and reports it.
 - `reset()` restores the current value to `init` and reports it.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — no other languages are offered for it. Your submission declares
 `class Solution` with the method `run(tallyCase)`, where `tallyCase` is
 a bundle-provided `TallyCase` carrying `.init`, the integer above, and

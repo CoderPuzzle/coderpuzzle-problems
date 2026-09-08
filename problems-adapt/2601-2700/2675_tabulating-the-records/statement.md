@@ -18,7 +18,7 @@ the record has no value there.
 
 Columns appear in lexically ascending order.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `function tabulateRecords(arr)` with the
 behavior above; the generated `class Solution` keeps its
 `run(tableProbe)` method, whose body hands your function to the

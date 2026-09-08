@@ -6,7 +6,7 @@ Enhance the string type so that any string accepts a `.echo(x)` call and
 answers with itself repeated `x` times. Leave the built-in `repeat`
 method alone — producing the repetition is the exercise.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `solve(echoCase)`, where `echoCase` is a bundle-provided `EchoCase`
 carrying `.str`, the string under test, and `.times`, the count `echo(x)`

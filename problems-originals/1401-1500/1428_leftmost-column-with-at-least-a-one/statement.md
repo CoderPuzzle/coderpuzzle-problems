@@ -18,7 +18,7 @@ the judge hands to your method:
 Making more than **1000 calls to `get`** is judged wrong (the oracle's
 budget; `dimensions()` is free).
 
-**Note (OpenOJ):** this problem is offered in Python 3 and Java only.
+**Note (CoderPuzzle):** this problem is offered in Python 3 and Java only.
 
 ### Example 1
 

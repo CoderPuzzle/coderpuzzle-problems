@@ -19,7 +19,7 @@ their keys.
 
 You may assume that both objects are the output of JSON.parse.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `solve(diffCase)`, where `diffCase` is a
 bundle-provided `DiffCase` carrying `.obj1` and `.obj2`, the two deeply

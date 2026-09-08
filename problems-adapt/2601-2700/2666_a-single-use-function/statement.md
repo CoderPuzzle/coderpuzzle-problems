@@ -9,7 +9,7 @@ That first wrapped call must return precisely what `fn` would return for
 its arguments. Every later call answers with `undefined` and never
 reaches `fn` again.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — no other languages are offered for it. Your submission declares
 `function atMostOnce(fn)` with the behavior above; the generated `class
 Solution` keeps its `run(singleUseCase)` method, whose body hands your
@@ -41,7 +41,7 @@ onceW("silent"); // undefined, fn was not called again
 ```text
 Input:
 fn = (t) => (t.trim().length)
-calls = [["  openoj  "],["x"]]
+calls = [["  coderpuzzle  "],["x"]]
 Output: [{"calls":1,"value":6}]
 Explanation: The first row runs fn and reports the trimmed length 6;
 the second row is turned away with undefined.

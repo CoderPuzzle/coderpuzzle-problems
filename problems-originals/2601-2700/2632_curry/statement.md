@@ -13,7 +13,7 @@ would call the curried version like csum(1)(2)(3), csum(1)(2,3), csum(1,2)(3),
 or csum(1,2,3). All these methods of calling the curried function should
 return the same value as the original.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript only —
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript only —
 LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `applyCurried(curryCase)`, where `curryCase`
 is a bundle-provided `CurryCase` carrying `.fn`, the callable built from the

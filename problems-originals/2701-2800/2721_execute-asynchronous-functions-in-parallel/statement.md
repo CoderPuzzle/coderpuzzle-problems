@@ -21,7 +21,7 @@ should also reject with the reason of the first rejection.
 
 Please solve it without using the built-in Promise.all function.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only, and its timing runs on a deterministic virtual clock instead of real
 timers. Your submission defines `promiseAll(functions)` and declares a
 class `Solution` whose `run(driver)` hands that function to the
@@ -34,7 +34,7 @@ original index, and when any function rejects, your promise must reject
 with the reason of the first rejection (simultaneous rejections break ties
 by original index). Wall-clock timing is deliberately not judged: the
 `"t"` field in the examples below records how long the original harness
-waited, and OpenOJ drops it — each case compares exactly one outcome,
+waited, and CoderPuzzle drops it — each case compares exactly one outcome,
 either `{"resolved": [...]}` or `{"rejected": <reason>}`, so any correct
 implementation produces the expected result regardless of machine speed.
 

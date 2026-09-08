@@ -27,7 +27,7 @@ object, returning `"role: cashier"`.
 
 Solve it without the built-in `Function.bind`.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `bindWithContext(bindCase)`, where `bindCase` is a bundle-provided
 `BindCase` exposing `.fn` (the callable built from the case's function

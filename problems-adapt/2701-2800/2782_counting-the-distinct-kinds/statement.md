@@ -15,7 +15,7 @@ hidden; the only way in is through the oracle's single method:
 
 Report how many distinct kinds the `n` elements hold.
 
-**Note (OpenOJ):** the signature is `numberOfCategories(kindOracle, n)`;
+**Note (CoderPuzzle):** the signature is `numberOfCategories(kindOracle, n)`;
 the oracle arrives as the first argument handed to your method, and
 every `hasSameKind` call spends one unit of an ample budget of
 10 000 queries. Kind labels are arbitrary — two inputs whose partitions

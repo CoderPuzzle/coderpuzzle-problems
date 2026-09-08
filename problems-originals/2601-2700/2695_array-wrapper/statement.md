@@ -10,7 +10,7 @@ constructor. This class should have two features:
 - When the String() function is called on the instance, it will return a
   comma separated string surrounded by brackets. For example, [1,2,3].
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `solve(wrapperCase)`, where `wrapperCase`
 is a bundle-provided `WrapperCase` carrying `.arrays`, the constructor

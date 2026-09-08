@@ -17,7 +17,7 @@ The test cases are generated so that, at any time, the product of any
 contiguous sequence of numbers fits into a signed 32-bit integer without
 overflowing.
 
-**Note (OpenOJ):** this problem is offered in Python 3 and Java only.
+**Note (CoderPuzzle):** this problem is offered in Python 3 and Java only.
 
 ### Example 1
 

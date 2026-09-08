@@ -9,7 +9,7 @@ returned by Object.keys().
 
 Please solve it without using the built-in JSON.stringify method.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript only —
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript only —
 LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `stringifyValue(jsonCase)`, where `jsonCase`
 is a bundle-provided `JsonCase` carrying `.object`, the live decoded value to

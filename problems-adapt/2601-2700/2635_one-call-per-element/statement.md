@@ -10,7 +10,7 @@ each output slot is the outcome of exactly one call.
 
 The built-in `Array.map` method is off limits.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `solve(morphCase)`, where `morphCase` is a bundle-provided `MorphCase`
 carrying `.arr`, the integer array under test, and `.fn`, the callable

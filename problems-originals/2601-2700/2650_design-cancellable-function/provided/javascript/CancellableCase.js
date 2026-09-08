@@ -57,11 +57,11 @@ class CancellableClock {
     }
 }
 
-const openojCancellableClock = new CancellableClock();
-const openojBuiltinSetTimeout = globalThis.setTimeout;
-globalThis.setTimeout = function openojVirtualSetTimeout(callback, delay) {
-    void openojBuiltinSetTimeout;
-    openojCancellableClock.scheduleFrom(openojCancellableClock.now, Number(delay) || 0, callback);
+const coderpuzzleCancellableClock = new CancellableClock();
+const coderpuzzleBuiltinSetTimeout = globalThis.setTimeout;
+globalThis.setTimeout = function coderpuzzleVirtualSetTimeout(callback, delay) {
+    void coderpuzzleBuiltinSetTimeout;
+    coderpuzzleCancellableClock.scheduleFrom(coderpuzzleCancellableClock.now, Number(delay) || 0, callback);
     return 0;
 };
 
@@ -77,7 +77,7 @@ class CancellableCase {
         // same virtual clock: a bare `setTimeout` inside the case's
         // generator body resolves to this parameter even without the patch.
         const build = new Function("setTimeout", "return (" + source + ");")(function (callback, delay) {
-            openojCancellableClock.scheduleFrom(openojCancellableClock.now, Number(delay) || 0, callback);
+            coderpuzzleCancellableClock.scheduleFrom(coderpuzzleCancellableClock.now, Number(delay) || 0, callback);
             return 0;
         });
         this.generatorFactory = build;
@@ -126,7 +126,7 @@ class CancellableCase {
                 throw new Error("Virtual tick cap exceeded");
             }
             await CancellableCase.hop();
-            openojCancellableClock.fireNext();
+            coderpuzzleCancellableClock.fireNext();
             await CancellableCase.hop();
         }
         await CancellableCase.hop();
@@ -139,14 +139,14 @@ class CancellableCase {
     }
 
     clockSize() {
-        return openojCancellableClock.size;
+        return coderpuzzleCancellableClock.size;
     }
 
     // One macrotask hop on the REAL clock: every pending microtask —
     // however many earlier hops create — drains before it resolves.
     static hop() {
         return new Promise((resolve) => {
-            openojBuiltinSetTimeout.call(null, resolve, 0);
+            coderpuzzleBuiltinSetTimeout.call(null, resolve, 0);
         });
     }
 

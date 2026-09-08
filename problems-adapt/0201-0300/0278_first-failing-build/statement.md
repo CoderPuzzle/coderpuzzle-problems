@@ -10,7 +10,7 @@ You have a query `isFailingBuild(build)` that reports whether a given
 build number fails review. Find the earliest failing build while
 minimizing how many times you call it.
 
-**Note (OpenOJ):** the signature is `locateFirstFailure(buildInspector, n)`;
+**Note (CoderPuzzle):** the signature is `locateFirstFailure(buildInspector, n)`;
 the query arrives bundled in the `buildInspector` object handed to your
 method — call `buildInspector.isFailingBuild(build)` to use it.
 

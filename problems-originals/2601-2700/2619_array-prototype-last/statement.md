@@ -8,7 +8,7 @@ elements in the array, it should return -1.
 
 You may assume the array is the output of JSON.parse.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `class Solution` with the method `solve(lastCase)`, where `lastCase` is a
 bundle-provided `LastCase` carrying `.nums`, the case's array. Enhance

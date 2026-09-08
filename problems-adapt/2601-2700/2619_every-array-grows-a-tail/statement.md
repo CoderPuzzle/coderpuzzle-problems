@@ -9,7 +9,7 @@ Arrays arrive as the output of `JSON.parse`, so an element can be any
 JSON value — a number, string, boolean, null, or a nested array or
 object.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `solve(tailProbe)`, where `tailProbe` is a bundle-provided `TailProbe`
 carrying `.nums`, the case's array. Add `last` to `Array.prototype`

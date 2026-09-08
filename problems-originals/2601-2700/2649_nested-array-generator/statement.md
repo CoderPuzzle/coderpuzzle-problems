@@ -12,7 +12,7 @@ inorder traversal iterates over each array from left to right, yielding any
 integers it encounters or applying inorder traversal to any arrays it
 encounters.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. Your submission declares
 `function* inorderTraversal(arr)` at top level; the generated `class
 Solution` keeps its `run(generatorCase)` method, whose body hands your

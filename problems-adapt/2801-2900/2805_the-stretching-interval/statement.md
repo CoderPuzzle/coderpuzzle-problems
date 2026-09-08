@@ -20,7 +20,7 @@ Given an `id` — the value returned by `stretchInterval` —
 Note: the `setTimeout` and `setInterval` functions in Node.js return an
 object, not a number.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only — LeetCode offers no other languages for it. It is judged on a
 deterministic virtual clock instead of real timers: your submission
 declares `function stretchInterval(fn, delay, period)` returning a

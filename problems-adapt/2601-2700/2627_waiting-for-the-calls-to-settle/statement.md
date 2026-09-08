@@ -17,7 +17,7 @@ apart each get their own execution.
 
 ![diagram](figures/2627-1.svg)
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. It is also judged on a deterministic virtual clock rather than real
 timers: your submission declares `function settleCalls(fn, t)` plus a class
 `Solution` whose `run` method hands your function to the bundle-provided

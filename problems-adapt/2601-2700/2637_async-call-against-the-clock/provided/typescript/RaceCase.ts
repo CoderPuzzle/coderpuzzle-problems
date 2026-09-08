@@ -55,19 +55,20 @@ class RaceClock {
     }
 }
 
-const openojRaceClock = new RaceClock();
+const coderpuzzleRaceClock = new RaceClock();
 // Ambient timer name for submissions (the judge compiles with ES libs
 // only): at run time this resolves to the virtual patched version below.
 declare const setTimeout: (callback: (...args: any[]) => void, delay?: number) => number;
-const openojBuiltinSetTimeout: (callback: (...args: any[]) => void, delay?: number) => unknown = (globalThis as any)
-    .setTimeout;
+const coderpuzzleBuiltinSetTimeout: (callback: (...args: any[]) => void, delay?: number) => unknown = (
+    globalThis as any
+).setTimeout;
 
-(globalThis as any).setTimeout = function openojVirtualSetTimeout(
+(globalThis as any).setTimeout = function coderpuzzleVirtualSetTimeout(
     callback: (...args: any[]) => void,
     delay?: number,
 ): number {
-    void (openojBuiltinSetTimeout as any);
-    openojRaceClock.scheduleFrom(openojRaceClock.now, Number(delay) || 0, callback);
+    void (coderpuzzleBuiltinSetTimeout as any);
+    coderpuzzleRaceClock.scheduleFrom(coderpuzzleRaceClock.now, Number(delay) || 0, callback);
     return 0;
 };
 
@@ -93,20 +94,20 @@ class RaceCase {
             callback: () => void,
             delay?: number,
         ) {
-            openojRaceClock.scheduleFrom(openojRaceClock.now, Number(delay) || 0, callback);
+            coderpuzzleRaceClock.scheduleFrom(coderpuzzleRaceClock.now, Number(delay) || 0, callback);
             return 0;
         }) as (...args: any[]) => any;
     }
 
     clockSize(): number {
-        return openojRaceClock.size;
+        return coderpuzzleRaceClock.size;
     }
 
     // One macrotask hop on the REAL clock: every pending microtask —
     // however many earlier hops create — drains before it resolves.
     static hop(): Promise<void> {
         return new Promise<void>((resolve) => {
-            openojBuiltinSetTimeout(resolve, 0);
+            coderpuzzleBuiltinSetTimeout(resolve, 0);
         });
     }
 
@@ -144,7 +145,7 @@ class RaceCase {
                 throw new Error("Virtual tick cap exceeded");
             }
             await RaceCase.hop();
-            openojRaceClock.fireNext();
+            coderpuzzleRaceClock.fireNext();
             await RaceCase.hop();
         }
         await RaceCase.hop();

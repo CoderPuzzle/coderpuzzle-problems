@@ -11,7 +11,7 @@ integers. An instance only needs to do two things well:
   comma-separated listing of its elements — `[1,2,3]` for the elements
   1, 2, and 3.
 
-**Note (OpenOJ):** this problem is offered in JavaScript and TypeScript
+**Note (CoderPuzzle):** this problem is offered in JavaScript and TypeScript
 only. Your submission declares `class Solution` with the method
 `solve(packCase)`, where `packCase` is a bundle-provided `PackCase`
 carrying `.arrays`, the constructor arguments for the NumberPack

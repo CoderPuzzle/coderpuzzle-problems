@@ -28,7 +28,7 @@ dimensions, the start, or the target — you may only ask queries of the
 Return the minimum number of moves from the starting cell to the target
 cell, or `-1` if no valid path exists.
 
-**Note (OpenOJ):** this problem is offered in Python 3 and Java only. The
+**Note (CoderPuzzle):** this problem is offered in Python 3 and Java only. The
 `GridMaster` object is passed to your method by the judge; its query budget
 is 4 000 000 calls — far more than exploration needs, but a solution that
 loops without direction will be cut off.
