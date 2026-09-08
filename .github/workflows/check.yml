@@ -17,6 +17,9 @@ on:
 
 permissions:
   contents: read
+  # the container jobs' ghcr auto-login needs this: without it the
+  # GITHUB_TOKEN has no package access and pulls are DENIED
+  packages: read
 
 concurrency:
   # a scheduled sweep overlapping a manual dispatch would double 41 heavy
