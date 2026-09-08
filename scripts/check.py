@@ -14,7 +14,7 @@ Static (always runs over the whole set, regardless of --problems):
   - solution.* exists for every starter.* (and no stray files)
   - starters regenerate exactly from problem.json (gen_starters --check)
 
-Runtime (--problems selection; needs a running OpenOJ serving this repo,
+Runtime (--problems selection; needs a running CoderPuzzle serving this repo,
 passed as --api, default http://localhost:8081):
   - every solution is submitted through the judge and must be ACCEPTED
     against every case in cases.json
@@ -614,7 +614,7 @@ def main() -> None:
     parser.add_argument(
         "--api",
         default="http://localhost:8081",
-        help="OpenOJ base URL for the runtime tier (compose publishes 8081)",
+        help="CoderPuzzle base URL for the runtime tier (compose publishes 8081)",
     )
     arguments = parser.parse_args()
 

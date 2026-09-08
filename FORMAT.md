@@ -1,6 +1,6 @@
 # coderpuzzle-problems format
 
-A problem-set repository for [OpenOJ](https://github.com/CoderPuzzle/coderpuzzle). Each
+A problem-set repository for [CoderPuzzle](https://github.com/CoderPuzzle/coderpuzzle). Each
 problem is one directory under `problems-adapt/`, named `<zero-padded id>_<slug>`,
 inside an inclusive id-range shard directory of 100 problems
 (`<lo>-<hi>`, e.g. `0001-0100` for ids 1-100) — the directory name is
@@ -224,7 +224,7 @@ languages the problem offers. Never edit a starter by hand — change
 
 Every problem must carry `solution.<ext>` for **every** `starter.<ext>`. A
 solution matches its starter's signature exactly and must pass every case in
-`cases.json` under OpenOJ's judge. `scripts/check.py` enforces this.
+`cases.json` under CoderPuzzle's judge. `scripts/check.py` enforces this.
 
 ## Formatting
 
@@ -278,7 +278,7 @@ The static tier (bundle completeness, schema conformance, statement grammar,
 duplicate ids/slugs, `solution.* ⊇ starter.*`, starter generator round-trip)
 always runs over the whole set regardless of the filter. The runtime tier
 (executing each selected problem's solutions against its cases through
-OpenOJ) runs only on the selected problems. CI runs the static tier
+CoderPuzzle) runs only on the selected problems. CI runs the static tier
 over the whole `problems-adapt/` tree on every push (with the format
 check), and a judge sweep of the bettercode-derived subset on demand
 and weekly; extend-derived bundles are judged out-of-band via coderpuzzle's

@@ -1,6 +1,6 @@
 # coderpuzzle-problems
 
-Problem sets for [OpenOJ](https://github.com/CoderPuzzle/coderpuzzle) — a self-hosted,
+Problem sets for [CoderPuzzle](https://github.com/CoderPuzzle/coderpuzzle) — a self-hosted,
 self-motivated learning framework. Nothing here is secret: every testcase
 and its expected output is public data by design.
 
@@ -53,7 +53,7 @@ modern (PEP 585/604) annotations, extend-derived bundles the original
    python3 scripts/check.py --problems=<your-keys>            # + runtime
    ```
 
-   The runtime tier needs a running OpenOJ serving this repository, e.g.
+   The runtime tier needs a running CoderPuzzle serving this repository, e.g.
    from a coderpuzzle checkout:
 
    ```bash
