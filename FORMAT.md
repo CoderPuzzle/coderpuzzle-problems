@@ -1,6 +1,6 @@
-# openoj-problems format
+# coderpuzzle-problems format
 
-A problem-set repository for [OpenOJ](https://github.com/zydo/openoj). Each
+A problem-set repository for [OpenOJ](https://github.com/CoderPuzzle/coderpuzzle). Each
 problem is one directory under `problems-adapt/`, named `<zero-padded id>_<slug>`,
 inside an inclusive id-range shard directory of 100 problems
 (`<lo>-<hi>`, e.g. `0001-0100` for ids 1-100) — the directory name is
@@ -118,7 +118,7 @@ LeetCode-style, with a neutral `value_type` tree shared by every language:
   or `struct` (a provided record class with declared `fields`). The node
   kinds take integer `items` (32-bit by convention across these node
   types) and may omit the implied spec. The wire formats and per-kind
-  serialization invariants are documented in the openoj repo's
+  serialization invariants are documented in the coderpuzzle repo's
   `docs/CODECS.md`.
 - `entrypoints` override the entry name per language (Go/Rust/TypeScript
   follow their casing conventions; Python/Java/C++/JavaScript use `method`).
@@ -149,7 +149,7 @@ The submission is a bash script; each case's input is the raw file text
 fed on stdin, and the script's stdout (trailing newlines stripped) is the
 expected value — stored without its trailing newline. Starters are
 `starter.sh` only, solutions `solution*.sh`; wire details live in the
-openoj repo's `docs/CODECS.md`.
+coderpuzzle repo's `docs/CODECS.md`.
 
 ### Design and interactive invocations
 
@@ -160,10 +160,10 @@ sequence. Interactive problems declare `parameters`, `provided.oracle`
 parameter carries `out_buffer.capacity_from`. Both run in every language
 the bundle offers. Full wire contracts, the per-language oracle
 construction table, and the statistical/validator judging modes live in
-the openoj repo's `docs/CODECS.md`.
+the coderpuzzle repo's `docs/CODECS.md`.
 
 Every class a problem's wire needs — `ListNode`, `TreeNode`, and the
-rest of the openoj repo's `docs/CODECS.md` wire→class table, a named
+rest of the coderpuzzle repo's `docs/CODECS.md` wire→class table, a named
 graph/list node, a struct record, a design class's helper types, an
 interactive oracle — ships as source under the bundle's own
 `provided/<language>/`. There is no shared library: the judge holds no
@@ -229,10 +229,10 @@ solution matches its starter's signature exactly and must pass every case in
 ## Formatting
 
 Every file in the repository is formatted by **one toolchain, owned by the
-openoj runner image**: `openoj/runner/formatters.py` (in the openoj repo)
+coderpuzzle runner image**: `coderpuzzle/runner/formatters.py` (in the coderpuzzle repo)
 holds the implementation and every version pin, and this repo's
 `scripts/format.py` is only a loader that imports it — from inside the
-image in CI, or from a sibling openoj checkout locally (`OPENOJ_RUNNER_DIR`
+image in CI, or from a sibling coderpuzzle checkout locally (`OPENOJ_RUNNER_DIR`
 to point elsewhere). Generation (`gen_starters.py`), checking
 (`check.py`), CI, the editor's Format button, and the `openoj format` CLI
 all format through that single module, so output is byte-identical
@@ -261,7 +261,7 @@ from the image:
 
 ```bash
 docker run --rm --user 0:0 -v "$PWD":/repo:rw \
-  ghcr.io/zydo/openoj:latest openoj format --check /repo/problems-adapt /repo/FORMAT.md
+  ghcr.io/coderpuzzle/coderpuzzle:latest openoj format --check /repo/problems-adapt /repo/FORMAT.md
 ```
 
 When you add or edit a solution, run the formatter before pushing — CI
@@ -281,5 +281,5 @@ always runs over the whole set regardless of the filter. The runtime tier
 OpenOJ) runs only on the selected problems. CI runs the static tier
 over the whole `problems-adapt/` tree on every push (with the format
 check), and a judge sweep of the bettercode-derived subset on demand
-and weekly; extend-derived bundles are judged out-of-band via openoj's
+and weekly; extend-derived bundles are judged out-of-band via coderpuzzle's
 `scripts/verify_solution.py`.

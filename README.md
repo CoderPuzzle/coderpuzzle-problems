@@ -1,6 +1,6 @@
-# openoj-problems
+# coderpuzzle-problems
 
-Problem sets for [OpenOJ](https://github.com/zydo/openoj) — a self-hosted,
+Problem sets for [OpenOJ](https://github.com/CoderPuzzle/coderpuzzle) — a self-hosted,
 self-motivated learning framework. Nothing here is secret: every testcase
 and its expected output is public data by design.
 
@@ -54,7 +54,7 @@ modern (PEP 585/604) annotations, extend-derived bundles the original
    ```
 
    The runtime tier needs a running OpenOJ serving this repository, e.g.
-   from an openoj checkout:
+   from a coderpuzzle checkout:
 
    ```bash
    OPENOJ_PROBLEMS_PATH=$PWD/problems-adapt OPENOJ_PROBLEMS=/problems \
@@ -68,11 +68,11 @@ On every push, a format check and a static completeness check run over
 the whole adapted tree (`problems-adapt/`, both provenances); the runtime judge
 sweep covers the bettercode-derived bundles on dispatch and weekly (see
 `.github/workflows/check.yml`). Extend-derived bundles are
-judge-verified out-of-band from an openoj checkout:
+judge-verified out-of-band from a coderpuzzle checkout:
 `python3 scripts/verify_solution.py problems-adapt/<shard>/<key>`.
 
 ## Serving this set
 
 ```bash
-OPENOJ_PROBLEMS=zydo/openoj-problems docker compose up --build
+OPENOJ_PROBLEMS=CoderPuzzle/coderpuzzle-problems docker compose up --build
 ```

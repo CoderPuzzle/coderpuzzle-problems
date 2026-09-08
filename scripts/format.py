@@ -2,7 +2,7 @@
 """Format (or --check) problem-repo files.
 
 The formatter implementation and every tool pin live in ONE place: the
-openoj runner image's `formatters.py` (see openoj/runner/formatters.py —
+coderpuzzle runner image's `formatters.py` (see coderpuzzle/runner/formatters.py —
 the editor's Format button and the `openoj format` CLI use the same
 module). This file is only a loader: it imports that implementation from
 wherever it is available so that generation (gen_starters), checking
@@ -10,12 +10,12 @@ wherever it is available so that generation (gen_starters), checking
 byte-identically. There is deliberately no local toolchain here anymore.
 
 Loader order:
-  1. `$OPENOJ_RUNNER_DIR/formatters.py` (an explicit openoj checkout);
+  1. `$OPENOJ_RUNNER_DIR/formatters.py` (an explicit coderpuzzle checkout);
   2. this script's own directory (when it runs from the image's
      own /runner checkout);
   3. the image's `/runner/formatters.py` (a problem checkout mounted
-     into the openoj image — CI and local docker runs);
-  4. a sibling `../openoj/runner/formatters.py` checkout.
+     into the coderpuzzle image — CI and local docker runs);
+  4. a sibling `../coderpuzzle/runner/formatters.py` checkout.
 
 Usage:
   format.py [--check] [--tolerant] [<bundle-or-file> ...]   # default: all
@@ -44,7 +44,7 @@ def _load_formatters():
     # Inside the image a checkout is usually mounted somewhere else (CI,
     # docker runs); the image carries its own formatters at /runner.
     candidates.append(Path("/runner"))
-    candidates.append(ROOT.parent / "openoj" / "runner")  # sibling checkout
+    candidates.append(ROOT.parent / "coderpuzzle" / "runner")  # sibling checkout
     for directory in candidates:
         module_path = directory / "formatters.py"
         if not module_path.is_file():
@@ -54,10 +54,10 @@ def _load_formatters():
         spec.loader.exec_module(module)
         return module
     raise SystemExit(
-        "formatters.py not found. Formatting is owned by the openoj runner image:\n"
-        "  - run inside the image (docker run ghcr.io/zydo/openoj ...), or\n"
-        "  - set OPENOJ_RUNNER_DIR to a checkout of the openoj repo's runner/, or\n"
-        "  - keep a sibling checkout of the openoj repo next to this one."
+        "formatters.py not found. Formatting is owned by the coderpuzzle runner image:\n"
+        "  - run inside the image (docker run ghcr.io/coderpuzzle/coderpuzzle ...), or\n"
+        "  - set OPENOJ_RUNNER_DIR to a checkout of the coderpuzzle repo's runner/, or\n"
+        "  - keep a sibling checkout of the coderpuzzle repo next to this one."
     )
 
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Completeness checker for an openoj-problems repository.
+"""Completeness checker for a coderpuzzle-problems repository.
 
 Two tiers:
 
@@ -29,7 +29,7 @@ Usage:
 The static tier checks bundle structure and metadata; the runtime tier
 additionally submits the canonical solution through the judge against
 every case in cases.json (solution_<variant> files are judged by
-openoj's verify_solution.py, not here).
+coderpuzzle's verify_solution.py, not here).
 """
 
 from __future__ import annotations
@@ -439,7 +439,7 @@ def repo_root_failures() -> list[Failure]:
     """Reject a reintroduced bank-root shared library.
 
     Every well-known data structure and oracle is bundle-owned under
-    `provided/<language>/` (FORMAT.md, docs/CODECS.md in the openoj repo);
+    `provided/<language>/` (FORMAT.md, docs/CODECS.md in the coderpuzzle repo);
     there is deliberately no repo-root `common/` or `shared/` source tree
     for a future change to accidentally resurrect.
     """
