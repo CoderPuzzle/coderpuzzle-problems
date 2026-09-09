@@ -30,19 +30,26 @@ concurrency:
 jobs:
   static:
     runs-on: ubuntu-latest
+    # observed static runs sit just under two hours; fail a hung run well
+    # before the six-hour default
+    timeout-minutes: 150
     container:
       image: ghcr.io/coderpuzzle/coderpuzzle:latest
       options: --user 0:0
     steps:
       - uses: actions/checkout@v5
       - name: Format check
-        run: coderpuzzle format --check problems-adapt
+        # FORMAT.md is part of the local default (scripts/format.py); gate
+        # it here too so its formatting cannot drift silently
+        run: coderpuzzle format --check problems-adapt FORMAT.md
       - name: Bundle static checks
         run: python3 scripts/check.py --tree problems-adapt --skip-runtime
 
   judge:
     if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
+    # per-shard bound: a hung compile must not burn the six-hour default
+    timeout-minutes: 120
     container:
       image: ghcr.io/coderpuzzle/coderpuzzle:latest
       options: --user 0:0
