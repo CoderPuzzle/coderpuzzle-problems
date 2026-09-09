@@ -122,6 +122,11 @@ LeetCode-style, with a neutral `value_type` tree shared by every language:
   `docs/CODECS.md`.
 - `entrypoints` override the entry name per language (Go/Rust/TypeScript
   follow their casing conventions; Python/Java/C++/JavaScript use `method`).
+  Keying differs by invocation type: function invocations use plain
+  language keys (`{"go": "twoSum"}`); design invocations key per method
+  (`{"go.solve": "Solve"}`) because one design class carries many methods;
+  interactive invocations use plain language keys again (one entry per
+  language).
 - `comparison` is `exact` (default), `sorted`, `multiset`, or `set`. Anything
   but `exact` must be justified by the statement ("in any order").
 
@@ -238,7 +243,9 @@ to point elsewhere). Generation (`gen_starters.py`), checking
 all format through that single module, so output is byte-identical
 everywhere. This repo deliberately tracks no formatter pins or
 `node_modules` of its own (a gitignored `node_modules/.bin` may exist
-for sibling-checkout formatting runs).
+for sibling-checkout formatting runs; the tracked `package.json` pins
+its three packages to the image's exact versions so a local
+`npm install` cannot drift the gate).
 
 | Files    | Formatter                                 | Language key in formatters.py |
 | -------- | ----------------------------------------- | ----------------------------- |

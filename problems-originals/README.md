@@ -1,8 +1,9 @@
 # problems-originals — the archive both adaptations derive from
 
 4,031 bundles, one per crawl problem: the curated bettercode originals
-(legacy schema-1 manifests; see [MAPPING.md](../problems/MAPPING.md) in the
-served tree for how each was adapted) and the crawl-keyed extend originals —
+(schema-2 since the 2026-09-05 manifest backfill; see
+[MAPPING.md](../problems-adapt/MAPPING.md) in the adapted tree for how each
+was adapted) and the crawl-keyed extend originals —
 statements verbatim from `~/code/lc-crawl` (restored superscripts, nothing
 invented), cases from structurally different oracle cross-checks, and the
 canonical solution in every language the crawl's wire family ships. Which
@@ -21,6 +22,7 @@ keeps the canonical name; the extend-side twin carries a `-crawl` slug
 suffix. Whole-set consistency is checked by
 `coderpuzzle/scripts/verify_corpus.py` (coverage, slug parity, shard
 placement, file shape) — run it after any tree surgery. This archive is
-frozen: it is not covered by CI and is not served. Suspect a
+frozen: it is not covered by CI, and it IS the served tree (the bank's
+`problems` symlink points here as of 2026-09-05). Suspect a
 corpus/judge-data contradiction? Do not edit frozen `cases.json` —
 surface it with evidence instead.
