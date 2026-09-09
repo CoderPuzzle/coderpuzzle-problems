@@ -515,7 +515,7 @@ def _open_session(api: str) -> str:
     request = urllib.request.Request(f"{api}/api/session", data=b"", method="POST")
     with urllib.request.urlopen(request, timeout=30) as response:
         cookie = response.headers.get("Set-Cookie", "")
-    match = re.search(r"openoj_session=([0-9a-f]+)", cookie)
+    match = re.search(r"coderpuzzle_session=([0-9a-f]+)", cookie)
     if not match:
         raise RuntimeError("session endpoint returned no session cookie")
     return match.group(1)
@@ -529,7 +529,7 @@ def submit(api: str, slug: str, language: str, code: str, session: str) -> dict:
         ),
         headers={
             "Content-Type": "application/json",
-            "Cookie": f"openoj_session={session}",
+            "Cookie": f"coderpuzzle_session={session}",
         },
         method="POST",
     )

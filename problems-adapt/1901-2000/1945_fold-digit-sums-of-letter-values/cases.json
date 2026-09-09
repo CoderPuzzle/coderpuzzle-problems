@@ -9,10 +9,10 @@
     },
     {
       "input": [
-        "openoj",
+        "coderpuzzle",
         2
       ],
-      "expected": 3
+      "expected": 7
     },
     {
       "input": [

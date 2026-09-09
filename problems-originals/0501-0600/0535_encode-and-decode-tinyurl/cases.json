@@ -35,7 +35,7 @@
         "params": [
           [],
           [
-            "https://openoj.dongziyu.com"
+            "https://coderpuzzle.dongziyu.com"
           ],
           [
             "http://tinyurl.com/1"
@@ -45,7 +45,7 @@
       "expected": [
         null,
         "http://tinyurl.com/1",
-        "https://openoj.dongziyu.com"
+        "https://coderpuzzle.dongziyu.com"
       ]
     },
     {

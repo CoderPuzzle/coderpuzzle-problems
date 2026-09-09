@@ -44,10 +44,10 @@
     {
       "input": [
         [
-          "openoj"
+          "coderpuzzle"
         ],
         [
-          "openoj"
+          "coderpuzzle"
         ]
       ],
       "expected": true
@@ -169,15 +169,20 @@
     {
       "input": [
         [
+          "c",
           "o",
-          "p",
+          "d",
           "e",
-          "n",
-          "o",
-          "j"
+          "r",
+          "p",
+          "u",
+          "z",
+          "z",
+          "l",
+          "e"
         ],
         [
-          "openoj"
+          "coderpuzzle"
         ]
       ],
       "expected": true

@@ -57,7 +57,7 @@ modern (PEP 585/604) annotations, extend-derived bundles the original
    from a coderpuzzle checkout:
 
    ```bash
-   OPENOJ_PROBLEMS_PATH=$PWD/problems-adapt OPENOJ_PROBLEMS=/problems \
+   CODERPUZZLE_PROBLEMS_PATH=$PWD/problems-adapt CODERPUZZLE_PROBLEMS=/problems \
      docker compose up -d --build api web runner
    python3 scripts/check.py --problems=all --api http://localhost:8081
    ```
@@ -74,5 +74,5 @@ judge-verified out-of-band from a coderpuzzle checkout:
 ## Serving this set
 
 ```bash
-OPENOJ_PROBLEMS=CoderPuzzle/coderpuzzle-problems docker compose up --build
+CODERPUZZLE_PROBLEMS=CoderPuzzle/coderpuzzle-problems docker compose up --build
 ```

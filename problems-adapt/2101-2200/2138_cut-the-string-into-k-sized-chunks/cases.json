@@ -192,12 +192,12 @@
     },
     {
       "input": [
-        "openoj",
+        "coderpuzzle",
         100,
         "p"
       ],
       "expected": [
-        "openojpppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp"
+        "coderpuzzleppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp"
       ]
     },
     {

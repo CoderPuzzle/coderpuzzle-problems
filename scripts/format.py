@@ -10,7 +10,7 @@ wherever it is available so that generation (gen_starters), checking
 byte-identically. There is deliberately no local toolchain here anymore.
 
 Loader order:
-  1. `$OPENOJ_RUNNER_DIR/formatters.py` (an explicit coderpuzzle checkout);
+  1. `$CODERPUZZLE_RUNNER_DIR/formatters.py` (an explicit coderpuzzle checkout);
   2. this script's own directory (when it runs from the image's
      own /runner checkout);
   3. the image's `/runner/formatters.py` (a problem checkout mounted
@@ -36,7 +36,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def _load_formatters():
     candidates = []
-    runner_dir = os.environ.get("OPENOJ_RUNNER_DIR")
+    runner_dir = os.environ.get("CODERPUZZLE_RUNNER_DIR")
     if runner_dir:
         candidates.append(Path(runner_dir))
     here = Path(__file__).resolve().parent  # this checkout's loader dir
@@ -56,7 +56,7 @@ def _load_formatters():
     raise SystemExit(
         "formatters.py not found. Formatting is owned by the coderpuzzle runner image:\n"
         "  - run inside the image (docker run ghcr.io/coderpuzzle/coderpuzzle ...), or\n"
-        "  - set OPENOJ_RUNNER_DIR to a checkout of the coderpuzzle repo's runner/, or\n"
+        "  - set CODERPUZZLE_RUNNER_DIR to a checkout of the coderpuzzle repo's runner/, or\n"
         "  - keep a sibling checkout of the coderpuzzle repo next to this one."
     )
 

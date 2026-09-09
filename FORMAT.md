@@ -232,7 +232,7 @@ Every file in the repository is formatted by **one toolchain, owned by the
 coderpuzzle runner image**: `coderpuzzle/runner/formatters.py` (in the coderpuzzle repo)
 holds the implementation and every version pin, and this repo's
 `scripts/format.py` is only a loader that imports it — from inside the
-image in CI, or from a sibling coderpuzzle checkout locally (`OPENOJ_RUNNER_DIR`
+image in CI, or from a sibling coderpuzzle checkout locally (`CODERPUZZLE_RUNNER_DIR`
 to point elsewhere). Generation (`gen_starters.py`), checking
 (`check.py`), CI, the editor's Format button, and the `coderpuzzle format` CLI
 all format through that single module, so output is byte-identical

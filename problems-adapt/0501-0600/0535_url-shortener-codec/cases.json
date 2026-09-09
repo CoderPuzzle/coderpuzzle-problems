@@ -11,10 +11,10 @@
         "params": [
           [],
           [
-            "https://openoj.example/a"
+            "https://coderpuzzle.example/a"
           ],
           [
-            "https://openoj.example/b"
+            "https://coderpuzzle.example/b"
           ],
           [
             "http://tinyurl.com/2"
@@ -25,7 +25,7 @@
         null,
         "http://tinyurl.com/1",
         "http://tinyurl.com/2",
-        "https://openoj.example/b"
+        "https://coderpuzzle.example/b"
       ]
     }
   ],
@@ -40,7 +40,7 @@
         "params": [
           [],
           [
-            "https://openoj.dongziyu.com"
+            "https://coderpuzzle.dongziyu.com"
           ],
           [
             "http://tinyurl.com/1"
@@ -50,7 +50,7 @@
       "expected": [
         null,
         "http://tinyurl.com/1",
-        "https://openoj.dongziyu.com"
+        "https://coderpuzzle.dongziyu.com"
       ]
     },
     {

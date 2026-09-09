@@ -24,7 +24,7 @@
         "fn": "(t) => (t.trim().length)",
         "calls": [
           [
-            "  openoj  "
+            "  coderpuzzle  "
           ],
           [
             "x"
@@ -34,7 +34,7 @@
       "expected": [
         {
           "calls": 1,
-          "value": 6
+          "value": 11
         }
       ]
     },

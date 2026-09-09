@@ -2,9 +2,9 @@
   "public": [
     {
       "input": [
-        "OpenOJ"
+        "CoderPuzzle"
       ],
-      "expected": "openoj"
+      "expected": "coderpuzzle"
     },
     {
       "input": [

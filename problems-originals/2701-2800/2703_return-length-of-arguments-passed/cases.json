@@ -29,7 +29,7 @@
     {
       "input": {
         "args": [
-          "openoj"
+          "coderpuzzle"
         ]
       },
       "expected": 1

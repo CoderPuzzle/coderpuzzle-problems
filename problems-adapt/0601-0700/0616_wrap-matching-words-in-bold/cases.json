@@ -74,14 +74,14 @@
     },
     {
       "input": [
-        "openoj",
+        "coderpuzzle",
         [
           "zz",
-          "openoj",
+          "coderpuzzle",
           "q"
         ]
       ],
-      "expected": "<b>openoj</b>"
+      "expected": "<b>coderpuzzle</b>"
     },
     {
       "input": [
