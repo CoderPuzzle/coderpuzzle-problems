@@ -38,6 +38,7 @@ import argparse
 import json
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -74,6 +75,17 @@ def _headings(markdown: str) -> list[tuple[int, str, int]]:
         if match:
             headings.append((len(match.group(1)), match.group(2).strip(), number))
     return headings
+
+
+def _unclosed_fence(markdown: str) -> bool:
+    """Mirror the judge's load-time rejection: an unclosed fenced block
+    would otherwise hide every later heading from the grammar checks and
+    404 at serve time."""
+    fence = False
+    for line in markdown.splitlines():
+        if line.strip().startswith("```"):
+            fence = not fence
+    return fence
 
 
 def _level3(text: str) -> list[tuple[str, str]]:
@@ -199,6 +211,27 @@ def check_bundle(bundle: Path) -> list[Failure]:
             if not isinstance(provided_oracle.get("construct"), list):
                 fail("invocation.provided.oracle.construct must be a list")
 
+    # limits: the judge requires exactly time_ms/memory_mb/output_kb plus
+    # optional threads, all positive ints — a bundle that fails this 404s at
+    # serve time, so reject it here instead
+    limits = problem.get("limits")
+    if not isinstance(limits, dict):
+        fail("limits must be an object")
+    else:
+        required_limits = {"time_ms", "memory_mb", "output_kb"}
+        if not required_limits <= set(limits) or not set(limits) <= required_limits | {"threads"}:
+            fail(
+                "limits must contain exactly: "
+                + ", ".join(sorted(required_limits))
+                + " (plus optional threads)"
+            )
+        elif not all(isinstance(value, int) and value > 0 for value in limits.values()):
+            fail("Limits values must be positive integers")
+
+    if _unclosed_fence(statement):
+        fail("statement.md contains an unclosed fenced block")
+        return failures
+
     # statement grammar
     headings = _headings(statement)
     top = [entry for entry in headings if entry[0] <= 2]
@@ -269,8 +302,12 @@ def check_bundle(bundle: Path) -> list[Failure]:
                         and len(case["input"]) == 1
                         and isinstance(case["input"][0], int)
                     }
-                    exhaustive_integer_domain = inputs.issuperset(
-                        range(lower, upper + 1)
+                    # a huge declared domain would iterate for minutes
+                    # only to conclude "not exhaustive" — wide domains can
+                    # never be exhaustive, so decide without iterating
+                    exhaustive_integer_domain = (
+                        upper - lower <= 10_000
+                        and inputs.issuperset(range(lower, upper + 1))
                     )
             if len(all_cases) < 10 and not exhaustive_integer_domain:
                 fail(
@@ -375,7 +412,11 @@ def check_bundle(bundle: Path) -> list[Failure]:
     # solutions.md: optional per-variant Solutions-tab guide (## sections)
     solutions_guide = bundle / "solutions.md"
     if solutions_guide.is_file():
-        guide_headings = _headings(solutions_guide.read_text(encoding="utf-8"))
+        guide_text = solutions_guide.read_text(encoding="utf-8")
+        if _unclosed_fence(guide_text):
+            fail("solutions.md contains an unclosed fenced block")
+            return failures
+        guide_headings = _headings(guide_text)
         levels = [level for level, _, _ in guide_headings]
         if levels and levels[0] != 1:
             fail("solutions.md must start with a level-one title")
@@ -406,10 +447,28 @@ def check_bundle(bundle: Path) -> list[Failure]:
     for stray in sorted(
         path.name for path in bundle.iterdir() if path.name not in allowed
     ):
-        if stray == "figures" and not figures_valid:
-            continue  # already reported above
         fail(f"unexpected file {stray}")
 
+    return failures
+
+
+def misnamed_dir_failures(root: Path) -> list[Failure]:
+    """Top-level directories that are neither valid bundles nor shards
+    holding valid bundles are invisible to every check and to the judge —
+    an authoring typo would ship as a problem nobody can serve."""
+    failures: list[Failure] = []
+    for child in sorted(root.iterdir()):
+        if not child.is_dir() or BUNDLE_NAME.fullmatch(child.name):
+            continue
+        if not any(
+            sub.is_dir() and BUNDLE_NAME.fullmatch(sub.name) for sub in child.iterdir()
+        ):
+            failures.append(
+                Failure(
+                    child.name,
+                    "neither a bundle nor a shard of bundles (expected '<id>_<slug>' naming)",
+                )
+            )
     return failures
 
 
@@ -459,6 +518,7 @@ def repo_root_failures() -> list[Failure]:
 
 def static_tier() -> tuple[list[Failure], dict[str, dict], dict[str, Path]]:
     failures: list[Failure] = list(repo_root_failures())
+    failures.extend(misnamed_dir_failures(PROBLEMS))
     catalog: dict[str, dict] = {}
     paths: dict[str, Path] = {}
     bundles = bundle_dirs(PROBLEMS)
@@ -537,6 +597,29 @@ def submit(api: str, slug: str, language: str, code: str, session: str) -> dict:
         return json.loads(response.read().decode("utf-8"))
 
 
+class SweepAbort(RuntimeError):
+    """The judge is gone; continuing would only record noise."""
+
+
+def submit_with_backoff(
+    api: str, slug: str, language: str, code: str, session: str, attempts: int = 4
+) -> dict:
+    """submit() that backs off on the judge's per-session throttle instead of
+    misreporting it (a 429 is rate limiting, not an unreachable judge — and
+    a fast sweep over small problems trips it routinely)."""
+    for attempt in range(attempts):
+        try:
+            return submit(api, slug, language, code, session)
+        except urllib.error.HTTPError as error:
+            if error.code == 429 and attempt < attempts - 1:
+                delay = 25.0 * (attempt + 1)
+                print(f"    throttled by the judge; waiting {delay:.0f}s before retrying")
+                time.sleep(delay)
+                continue
+            raise
+    raise AssertionError("unreachable")  # pragma: no cover
+
+
 def runtime_tier(
     selected: list[str], catalog: dict[str, dict], api: str, paths: dict[str, Path]
 ) -> list[Failure]:
@@ -548,6 +631,7 @@ def runtime_tier(
         session = _open_session(api)
     except Exception as error:  # noqa: BLE001
         return [Failure("session", f"could not open a judge session: {error}")]
+    consecutive_unreachable = 0
     for position, key in enumerate(selected, start=1):
         # the tree is sharded: the catalog carries each bundle's resolved
         # directory (a bare PROBLEMS/key join would miss every shard)
@@ -566,11 +650,19 @@ def runtime_tier(
             except OSError:
                 continue  # reported by the static tier
             try:
-                result = submit(api, problem["slug"], language, code, session)
+                result = submit_with_backoff(api, problem["slug"], language, code, session)
+                consecutive_unreachable = 0
             except urllib.error.URLError as error:
                 failures.append(Failure(key, f"{language}: judge unreachable: {error}"))
-                return failures
+                consecutive_unreachable += 1
+                if consecutive_unreachable >= 3:
+                    failures.append(
+                        Failure("sweep", "judge unreachable three requests in a row; aborting the sweep")
+                    )
+                    return failures
+                continue
             except Exception as error:  # noqa: BLE001
+                consecutive_unreachable = 0
                 failures.append(Failure(key, f"{language}: submission failed: {error}"))
                 continue
             if result.get("status") != "accepted":
